@@ -19,7 +19,7 @@ class MenuActivity : AppCompatActivity() {
     private fun establecerVariablesID() {
         botonInicioSesion = findViewById(R.id.cardMenuInicioSesion)
         botonFuncionLista1 = findViewById(R.id.cardMenuFuncionLista)
-        botonFuncionLista2= findViewById(R.id.cardMenuFuncionLista2)
+        botonFuncionLista2 = findViewById(R.id.cardMenuFuncionLista2)
     }
 
     private fun establecerEscucha() {
