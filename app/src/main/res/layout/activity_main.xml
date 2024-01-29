@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_claro"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butMainGoMenu"
+        android:textColor="@color/black"
+        android:layout_width="250dp"
+        android:fontFamily="@font/gordita"
+        android:layout_height="50dp"
+        android:textSize="20sp"
+        android:text="@string/accederMenu"
+        android:background="@color/fondo_oscuro"
+        app:layout_constraintBottom_toTopOf="@+id/editTextMainBuscador"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:fontFamily="@font/gordita"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nombre_restaurant"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:fontFamily="@font/gordita"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/black"
+        android:outlineAmbientShadowColor="@color/black"
+        android:focusedSearchResultHighlightColor="@color/black"
+        android:shadowColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textColorHighlight="@color/black"
+        android:searchResultHighlightColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        android:id="@+id/editTextMainBuscador"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="68dp"
+        android:hint="Buscador:"
+        android:drawableTint="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/butMainBuscador"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/butMainBuscador"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:src="@mipmap/ic_lupa_foreground"
+        app:layout_constraintBottom_toTopOf="@+id/cardMainControlador"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextMainBuscador"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.413" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMainControlador"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="270dp"
+        app:cardBackgroundColor="@color/fondo_oscuro_menosVisibilidad"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ListView
+            android:id="@+id/lista"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+    </androidx.cardview.widget.CardView>
+
+    <Switch
+        android:fontFamily="@font/gordita"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/black"
+        android:id="@+id/switchMainSoloCarne"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:checked="false"
+        android:text="Solo carne"
+        android:thumb="@mipmap/ic_carne_foreground"
+        app:layout_constraintBottom_toTopOf="@+id/cardMainControlador"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMainBuscador" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_claro"
+    android:orientation="vertical"
+    tools:context=".FuncionLista2Activity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butMainGoMenu"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@color/fondo_oscuro"
+        android:fontFamily="@font/gordita"
+        android:text="@string/accederMenu"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gordita"
+        android:text="@string/nombre_restaurant"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/cgFuncionLista2Controlador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butMainGoMenu"
+        app:layout_constraintVertical_bias="0.011">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipFuncionLista2Carne"
+            style="@style/stChipEntry"
+            android:layout_marginEnd="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gordita"
+            android:text="@string/ContCarne" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipFuncionLista2Verdura"
+            style="@style/stChipEntry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gordita"
+            android:text="@string/ContVerdura" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipFuncionLista2Postre"
+            style="@style/stChipEntry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gordita"
+            android:text="@string/ContienePostre" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipFuncionLista2Bebida"
+            style="@style/stChipEntry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gordita"
+            android:text="@string/TieneBebida" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardFuncionLista2Controlador"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="300dp"
+        app:cardBackgroundColor="@color/fondo_oscuro_menosVisibilidad"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ListView
+            android:id="@+id/listFuncionLista2Mostrar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
