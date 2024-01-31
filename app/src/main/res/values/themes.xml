@@ -20,4 +20,8 @@
         <item name="chipStrokeColor">@color/fondo_claro</item>
         <item name="chipStrokeWidth">3dp</item>
     </style>
+    <style name="stToggle">
+        <item name="android:fontFamily">@font/gordita</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
 </resources>

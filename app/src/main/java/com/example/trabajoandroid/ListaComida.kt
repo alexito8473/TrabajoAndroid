@@ -87,7 +87,7 @@ class ListaComida {
         listaTotalComida.add(
             Comida(
                 context.getString(string.OjoDedios),
-                false,
+                true,
                 R.drawable.ojosdedios,
                 20.2,
                 context.getString(string.Descrip_ojoDeDios),
@@ -168,6 +168,39 @@ class ListaComida {
                 R.drawable.tartadequeso,
                 12.6,
                 "tarta de queso",
+                false,
+                true
+            )
+        )
+        listaTotalComida.add(
+            Comida(
+                context.getString(string.Helado),
+                false,
+                R.drawable.helado,
+                9.34,
+                "helado",
+                false,
+                true
+            )
+        )
+        listaTotalComida.add(
+            Comida(
+                context.getString(string.HeladoTri),
+                false,
+                R.drawable.heladotri,
+                11.2,
+                "helado con 3 bolas",
+                false,
+                true
+            )
+        )
+        listaTotalComida.add(
+            Comida(
+                context.getString(string.HeladoCu),
+                false,
+                R.drawable.heladocu,
+                15.99,
+                "helado con 4 bolas",
                 false,
                 true
             )

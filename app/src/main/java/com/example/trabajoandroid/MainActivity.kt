@@ -36,8 +36,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun establecerVariables() {
-        listaMostrar.addAll(ListaComida().crearListaComida(this))
-        listaReserva.addAll(listaMostrar)
+        listaTotalComida.addAll(ListaComida().crearListaComida(this))
+        listaMostrar.addAll(listaTotalComida)
+        listaReserva.addAll(listaTotalComida)
         adapter = ComidaAdapter(this, listaMostrar)
         listView.adapter = adapter;
     }

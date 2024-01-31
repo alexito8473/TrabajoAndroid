@@ -7,6 +7,7 @@
     <string name="Iniciar_Sesion">Iniciar sesión</string>
     <string name="FuncionLista1">Función lista 1</string>
     <string name="FuncionLista2">Función lista 2</string>
+    <string name="FuncionLista3">Función lista 3</string>
     <string name="Scones">Scones</string>
     <string name="SuperScones">Super scones</string>
     <string name="CarneCruda">Carne cruda</string>
@@ -22,6 +23,9 @@
     <string name="PolloPohe">Pollo poco hecho</string>
     <string name="PolloFrito">Pollo frito</string>
     <string name="TartaQueso">Tarta de queso</string>
+    <string name="Helado">Helado triple</string>
+    <string name="HeladoTri">Helado tres bolones</string>
+    <string name="HeladoCu">Helado cuatro bolones</string>
     <string name="Intent_Comida">comida</string>
     <string name="Volver">volver</string>
     <string name="ContCarne">Añadir platos de carne</string>
@@ -29,6 +33,8 @@
     <string name="ContDesayuno">Añadir desayuno</string>
     <string name="TieneBebida">Añadir bebidas</string>
     <string name="ContienePostre">Añadir postres</string>
+    <string name="TogleOn">Solo verdura</string>
+    <string name="TogleOf">Solo carne</string>
     <string name="Descrip_scones">Los scones son unos panecillos típicos de la cocina inglesa, que se suelen servir con té, crema batida y mermelada. Tienen una textura suave y esponjosa, y se pueden preparar con diferentes ingredientes, como arándanos, queso, pasas o frutos secos.</string>
     <string name="Descrip_superScones"> Los scones son unos bocadillos dulces o salados que se originaron en Escocia y que se popularizaron en el Reino Unido y otros países. Se elaboran con una masa de harina, mantequilla, azúcar y leche, a la que se le puede añadir frutas, queso o especias. Se cortan en formas redondas, triangulares o cuadradas y se hornean hasta que quedan tiernos por dentro y crujientes por fuera. Se suelen consumir calientes o tibios, untados con mantequilla, nata o mermelada, acompañando una taza de té o café. Son ideales para el desayuno, la merienda o el brunch, y se pueden preparar en casa con facilidad</string>
     <string name="Descrip_carneCruda">La carne cruda es la carne que no ha sido cocinada ni sometida a ningún proceso de conservación. Se puede consumir de diferentes formas, como el tartar, el carpaccio, el ceviche o el sushi. Sin embargo, comer carne cruda puede tener riesgos para la salud, ya que puede contener bacterias, parásitos, virus o toxinas que pueden provocar enfermedades como la salmonelosis, la triquinosis, la toxoplasmosis o la listeriosis</string>

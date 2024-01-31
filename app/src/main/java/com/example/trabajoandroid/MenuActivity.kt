@@ -9,6 +9,7 @@ class MenuActivity : AppCompatActivity() {
     private lateinit var botonInicioSesion: CardView
     private lateinit var botonFuncionLista1: CardView
     private lateinit var botonFuncionLista2: CardView
+    private lateinit var botonFuncionLista3: CardView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
@@ -20,6 +21,7 @@ class MenuActivity : AppCompatActivity() {
         botonInicioSesion = findViewById(R.id.cardMenuInicioSesion)
         botonFuncionLista1 = findViewById(R.id.cardMenuFuncionLista)
         botonFuncionLista2 = findViewById(R.id.cardMenuFuncionLista2)
+        botonFuncionLista3 = findViewById(R.id.cardMenuFuncionLista3)
     }
 
     private fun establecerEscucha() {
@@ -30,6 +32,9 @@ class MenuActivity : AppCompatActivity() {
         }
         botonFuncionLista2.setOnClickListener {
             startActivity(Intent(this, FuncionLista2Activity::class.java))
+        }
+        botonFuncionLista3.setOnClickListener {
+            startActivity(Intent(this, FuncionLista3Activity::class.java))
         }
     }
 

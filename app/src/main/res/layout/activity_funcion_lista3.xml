@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_claro"
+    tools:context=".FuncionLista3Activity">
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butFuncionLista3Volver"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@color/fondo_oscuro"
+        android:fontFamily="@font/gordita"
+        android:text="@string/accederMenu"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gordita"
+        android:text="@string/nombre_restaurant"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:background="@drawable/sl_toggle"
+        android:onClick="prueba"
+        android:textOff="@string/TogleOf"
+        android:textOn="@string/TogleOn"
+        style="@style/stToggle"
+        app:layout_constraintBottom_toTopOf="@+id/cardFuncionLista3Controlador"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butFuncionLista3Volver" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardFuncionLista3Controlador"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="350dp"
+        app:cardBackgroundColor="@color/fondo_oscuro_menosVisibilidad"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ListView
+            android:id="@+id/listFuncionLista3Mostrar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

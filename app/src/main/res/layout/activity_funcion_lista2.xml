@@ -9,7 +9,7 @@
     tools:context=".FuncionLista2Activity">
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/butMainGoMenu"
+        android:id="@+id/butFuncionLista2Volver"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:background="@color/fondo_oscuro"
@@ -44,15 +44,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/butMainGoMenu"
+        app:layout_constraintTop_toBottomOf="@+id/butFuncionLista2Volver"
         app:layout_constraintVertical_bias="0.011">
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chipFuncionLista2Carne"
             style="@style/stChipEntry"
-            android:layout_marginEnd="30dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
             android:fontFamily="@font/gordita"
             android:text="@string/ContCarne" />
 
@@ -61,6 +61,7 @@
             style="@style/stChipEntry"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="80dp"
             android:fontFamily="@font/gordita"
             android:text="@string/ContVerdura" />
 
@@ -85,7 +86,7 @@
         android:id="@+id/cardFuncionLista2Controlador"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="350dp"
         app:cardBackgroundColor="@color/fondo_oscuro_menosVisibilidad"
         app:cardCornerRadius="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -97,4 +98,42 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"></ListView>
     </androidx.cardview.widget.CardView>
+
+    <RadioGroup
+        android:id="@+id/radGroFuncionLista2Controlar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/cardFuncionLista2Controlador"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cgFuncionLista2Controlador">
+
+    <RadioButton
+        android:id="@+id/radFuncionLista2Total"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:buttonTint="@color/fondo_oscuro"
+        android:checked="true"
+        android:textColor="@color/black"
+        android:text="Cualquier precio"
+        android:onClick="onPrecio"/>
+
+    <RadioButton
+        android:id="@+id/radFuncionLista2Menos"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textColor="@color/black"
+        android:buttonTint="@color/fondo_oscuro"
+        android:text="Menos de 20 euros"
+        android:onClick="onPrecio"/>
+    <RadioButton
+        android:id="@+id/radFuncionLista2Mas"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textColor="@color/black"
+        android:buttonTint="@color/fondo_oscuro"
+        android:text="Mas de 20 euros"
+        android:onClick="onPrecio"/>
+</RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

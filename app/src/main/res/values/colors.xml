@@ -13,5 +13,6 @@
     <color name="fondo_oscuro_menosVisibilidad">#56396933</color>
     <color name="transparente">#00FFFFFF</color>
     <color name="pulsado">#B90909</color>
-
+    <color name="carne">#9AB90909</color>
+    <color name="verdura">#9A5FC543</color>
 </resources>
