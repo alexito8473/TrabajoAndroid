@@ -74,7 +74,7 @@
         android:layout_height="70dp"
         app:cardBackgroundColor="@color/fondo_complementaro"
         app:cardCornerRadius="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/cardMenuWeb"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardMenuFuncionLista2">
@@ -85,6 +85,26 @@
             android:fontFamily="@font/gordita"
             android:gravity="center"
             android:text="@string/FuncionLista3"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMenuWeb"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        app:cardBackgroundColor="@color/fondo_complementaro"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardMenuFuncionLista3">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/gordita"
+            android:gravity="center"
+            android:text="@string/FuncionWeb"
             android:textColor="@color/black"
             android:textSize="30sp" />
     </androidx.cardview.widget.CardView>

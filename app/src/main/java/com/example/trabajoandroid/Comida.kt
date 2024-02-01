@@ -10,8 +10,8 @@ class Comida : Serializable {
     private var descripcion: String
     private var isBebida: Boolean
     private var isPostre: Boolean
-
-    constructor(nombre: String,tieneCarne: Boolean,imagenComida: Int,precio: Double,descripcion: String,isBebida: Boolean,isPostre: Boolean) {
+    private var videoPath: String
+    constructor(nombre: String,tieneCarne: Boolean,imagenComida: Int,precio: Double,descripcion: String,isBebida: Boolean,isPostre: Boolean,videoPath: String) {
         this.nombre = nombre
         this.tieneCarne=tieneCarne
         this.imagenComida=imagenComida
@@ -19,6 +19,7 @@ class Comida : Serializable {
         this.descripcion=descripcion
         this.isBebida=isBebida
         this.isPostre=isPostre
+        this.videoPath=videoPath
     }
 
     fun getNombre(): String {

@@ -10,6 +10,7 @@ class MenuActivity : AppCompatActivity() {
     private lateinit var botonFuncionLista1: CardView
     private lateinit var botonFuncionLista2: CardView
     private lateinit var botonFuncionLista3: CardView
+    private lateinit var botonFuncionWeb: CardView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
@@ -22,6 +23,7 @@ class MenuActivity : AppCompatActivity() {
         botonFuncionLista1 = findViewById(R.id.cardMenuFuncionLista)
         botonFuncionLista2 = findViewById(R.id.cardMenuFuncionLista2)
         botonFuncionLista3 = findViewById(R.id.cardMenuFuncionLista3)
+        botonFuncionWeb= findViewById(R.id.cardMenuWeb)
     }
 
     private fun establecerEscucha() {
@@ -35,6 +37,9 @@ class MenuActivity : AppCompatActivity() {
         }
         botonFuncionLista3.setOnClickListener {
             startActivity(Intent(this, FuncionLista3Activity::class.java))
+        }
+        botonFuncionWeb.setOnClickListener {
+            startActivity(Intent(this, WebActivity::class.java))
         }
     }
 
