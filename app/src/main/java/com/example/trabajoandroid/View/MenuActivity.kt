@@ -1,9 +1,10 @@
-package com.example.trabajoandroid
+package com.example.trabajoandroid.View
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import com.example.trabajoandroid.R
 
 class MenuActivity : AppCompatActivity() {
     private lateinit var botonInicioSesion: CardView

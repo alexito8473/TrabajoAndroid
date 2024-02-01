@@ -16,25 +16,25 @@
         android:theme="@style/Theme.MaterialComponents.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".WebActivity"
+            android:name=".View.WebActivity"
             android:exported="false" />
         <activity
-            android:name=".DatoComidaV2Activity"
+            android:name=".View.DatoComidaV2Activity"
             android:exported="false" />
         <activity
-            android:name=".FuncionLista3Activity"
+            android:name=".View.FuncionLista3Activity"
             android:exported="false" />
         <activity
-            android:name=".FuncionLista2Activity"
+            android:name=".View.FuncionLista2Activity"
             android:exported="false" />
         <activity
-            android:name=".DatoComidaActivity"
+            android:name=".View.DatoComidaActivity"
             android:exported="false" />
         <activity
-            android:name=".MenuActivity"
+            android:name=".View.MenuActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".View.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,9 +1,9 @@
-package com.example.trabajoandroid
+package com.example.trabajoandroid.View
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.webkit.WebView
-import android.widget.MediaController
+import com.example.trabajoandroid.R
 
 class WebActivity : AppCompatActivity() {
     private lateinit var webVisor:WebView

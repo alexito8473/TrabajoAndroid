@@ -1,4 +1,4 @@
-package com.example.trabajoandroid
+package com.example.trabajoandroid.Model
 
 import java.io.Serializable
 
@@ -48,5 +48,8 @@ class Comida : Serializable {
 
     fun isPostre(): Boolean {
         return isPostre;
+    }
+    fun getVideoPath(): String {
+        return videoPath;
     }
 }

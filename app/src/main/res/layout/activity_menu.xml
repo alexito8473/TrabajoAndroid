@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@color/fondo_claro"
     android:layout_height="match_parent"
-    tools:context=".MenuActivity">
+    tools:context=".View.MenuActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardMenuInicioSesion"

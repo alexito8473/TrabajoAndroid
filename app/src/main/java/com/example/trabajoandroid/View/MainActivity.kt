@@ -1,4 +1,4 @@
-package com.example.trabajoandroid
+package com.example.trabajoandroid.View
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,10 @@ import android.widget.ListView
 import android.widget.Switch
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
+import com.example.trabajoandroid.ViewModel.ComidaAdapter
+import com.example.trabajoandroid.ViewModel.ListaComida
+import com.example.trabajoandroid.Model.Comida
+import com.example.trabajoandroid.R
 
 class MainActivity : AppCompatActivity() {
     private lateinit var botBuscador: ImageView

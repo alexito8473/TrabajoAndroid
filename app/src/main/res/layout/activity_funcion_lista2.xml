@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/fondo_claro"
     android:orientation="vertical"
-    tools:context=".FuncionLista2Activity">
+    tools:context=".View.FuncionLista2Activity">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/butFuncionLista2Volver"

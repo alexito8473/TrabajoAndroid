@@ -5,20 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fondo_claro"
-    tools:context=".DatoComidaV2Activity">
+    tools:context=".View.DatoComidaV2Activity">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageButDatoV2CoPulsar"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:background="@color/transparente"
+        android:background="@color/white"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:shapeAppearanceOverlay="@style/stImageGoogleV2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024" />
+        app:layout_constraintVertical_bias="0.024"
+        app:strokeColor="@color/fondo_oscuro"
+        app:strokeWidth="8dp"/>
 
     <TextView
         android:id="@+id/textDatoCoV2Titulo"
@@ -39,23 +41,25 @@
         android:id="@+id/butDatoCoV2Volver"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="36dp"
         android:backgroundTint="@color/fondo_oscuro"
         android:fontFamily="@font/gordita"
         android:text="@string/Volver"
         android:textColor="@color/black"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/viDatoCoV2Internet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDatoCoV2Titulo" />
 
     <VideoView
         android:id="@+id/viDatoCoV2Internet"
-        android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        app:layout_constraintBottom_toTopOf="@+id/butDatoCoV2Volver"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textDatoCoV2Titulo" />
+        app:layout_constraintTop_toBottomOf="@+id/textDatoCoV2Titulo"
+        app:layout_constraintVertical_bias="0.864" />
 </androidx.constraintlayout.widget.ConstraintLayout>

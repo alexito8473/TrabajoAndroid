@@ -1,7 +1,9 @@
-package com.example.trabajoandroid
+package com.example.trabajoandroid.ViewModel
 
 
 import android.content.Context
+import com.example.trabajoandroid.Model.Comida
+import com.example.trabajoandroid.R
 import com.example.trabajoandroid.R.string
 
 class ListaComida {

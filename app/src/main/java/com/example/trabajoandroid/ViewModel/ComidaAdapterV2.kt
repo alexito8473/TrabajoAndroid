@@ -1,4 +1,4 @@
-package com.example.trabajoandroid
+package com.example.trabajoandroid.ViewModel
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.trabajoandroid.Model.Comida
+import com.example.trabajoandroid.R
 
 class ComidaAdapterV2(private val mContext: Context, private val listaComida: MutableList<Comida>) :
     ArrayAdapter<Comida>(mContext, 0, listaComida) {

@@ -1,4 +1,4 @@
-package com.example.trabajoandroid
+package com.example.trabajoandroid.View
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,8 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.trabajoandroid.Model.Comida
+import com.example.trabajoandroid.R
 
 class DatoComidaActivity : AppCompatActivity() {
     private lateinit var textTitulo: TextView
@@ -48,7 +50,7 @@ class DatoComidaActivity : AppCompatActivity() {
             textDescripcion.visibility = View.VISIBLE;
         }
         butVolver.setOnClickListener {
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
         }
     }
 

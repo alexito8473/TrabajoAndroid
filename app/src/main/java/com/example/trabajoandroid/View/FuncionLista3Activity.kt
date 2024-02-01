@@ -1,4 +1,4 @@
-package com.example.trabajoandroid
+package com.example.trabajoandroid.View
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,10 @@ import android.widget.ListView
 import android.widget.ToggleButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
+import com.example.trabajoandroid.ViewModel.ComidaAdapterV2
+import com.example.trabajoandroid.ViewModel.ListaComida
+import com.example.trabajoandroid.Model.Comida
+import com.example.trabajoandroid.R
 
 class FuncionLista3Activity : AppCompatActivity() {
     private lateinit var listView: ListView

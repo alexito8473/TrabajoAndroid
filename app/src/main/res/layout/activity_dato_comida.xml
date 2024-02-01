@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fondo_claro"
-    tools:context=".DatoComidaActivity">
+    tools:context=".View.DatoComidaActivity">
 
     <ImageButton
         android:id="@+id/imageButDatoCoPulsar"
