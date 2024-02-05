@@ -8,9 +8,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="fondo_claro">#ffefdd</color>
+    <color name="fondo_claro_claro">#FBEFE1</color>
     <color name="fondo_oscuro">#396933</color>
     <color name="fondo_complementaro">#ddedff</color>
     <color name="fondo_oscuro_menosVisibilidad">#56396933</color>
+    <color name="fondo_oscuro_menosVisibilidad_menos">#31396933</color>
     <color name="transparente">#00FFFFFF</color>
     <color name="pulsado">#B90909</color>
     <color name="carne">#9AB90909</color>

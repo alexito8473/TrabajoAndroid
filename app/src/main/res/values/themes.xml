@@ -13,6 +13,7 @@
         <item name="android:statusBarColor">@color/fondo_oscuro</item>
         <!-- Customize your theme here. -->
         <item name="fontFamily">@font/gordita</item>
+        <item name="android:windowBackground">@color/fondo_claro</item>
     </style>
     <style name="stChipEntry" parent="Widget.MaterialComponents.Chip.Filter">
         <item name="android:fontFamily">@font/gordita</item>

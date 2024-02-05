@@ -110,7 +110,7 @@
         android:buttonTint="@color/fondo_oscuro"
         android:checked="true"
         android:textColor="@color/black"
-        android:text="Cualquier precio"
+        android:text="@string/cualquierTipo"
         android:onClick="onPrecio"/>
 
     <RadioButton
@@ -119,7 +119,7 @@
         android:layout_height="match_parent"
         android:textColor="@color/black"
         android:buttonTint="@color/fondo_oscuro"
-        android:text="Menos de 20 euros"
+        android:text="@string/MenosDe20"
         android:onClick="onPrecio"/>
     <RadioButton
         android:id="@+id/radFuncionLista2Mas"
@@ -127,7 +127,7 @@
         android:layout_height="match_parent"
         android:textColor="@color/black"
         android:buttonTint="@color/fondo_oscuro"
-        android:text="Mas de 20 euros"
+        android:text="@string/masDe20"
         android:onClick="onPrecio"/>
 </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

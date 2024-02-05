@@ -29,6 +29,7 @@ class MenuActivity : AppCompatActivity() {
 
     private fun establecerEscucha() {
         botonInicioSesion.setOnClickListener {
+            startActivity(Intent(this, InicioSesionActivity::class.java))
         }
         botonFuncionLista1.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))

@@ -12,30 +12,30 @@
         android:id="@+id/nombreICV2_Comida"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="60dp"
         android:text="Nombre"
         android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.863"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toEndOf="@+id/imagenICV2_Comida"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imagenICV2_Comida"
         android:layout_width="120dp"
         android:layout_height="120dp"
+        android:background="@color/fondo_oscuro_menosVisibilidad_menos"
         android:fontFamily="@font/gordita"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.533"
-        app:srcCompat="@drawable/carne"
         app:shapeAppearanceOverlay="@style/stImageGoogle"
+        app:srcCompat="@drawable/carne"
         app:strokeColor="@color/fondo_oscuro"
-        android:background="@color/white"
         app:strokeWidth="5dp" />
 
     <androidx.constraintlayout.widget.Guideline

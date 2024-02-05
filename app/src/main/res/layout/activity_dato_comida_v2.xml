@@ -11,7 +11,7 @@
         android:id="@+id/imageButDatoV2CoPulsar"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:background="@color/white"
+        android:background="@color/fondo_claro_claro"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

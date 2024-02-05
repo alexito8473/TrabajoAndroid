@@ -36,6 +36,10 @@
     <string name="ContienePostre">Añadir postres</string>
     <string name="TogleOf">Solo verdura</string>
     <string name="TogleOn">Solo carne</string>
+    <string name="cualquierTipo">Cualquier precio</string>
+    <string name="masDe20">Mas de 20€</string>
+    <string name="MenosDe20">Menos de 20€</string>
+
     <string name="Descrip_scones">Los scones son unos panecillos típicos de la cocina inglesa, que se suelen servir con té, crema batida y mermelada. Tienen una textura suave y esponjosa, y se pueden preparar con diferentes ingredientes, como arándanos, queso, pasas o frutos secos.</string>
     <string name="Descrip_superScones"> Los scones son unos bocadillos dulces o salados que se originaron en Escocia y que se popularizaron en el Reino Unido y otros países. Se elaboran con una masa de harina, mantequilla, azúcar y leche, a la que se le puede añadir frutas, queso o especias.</string>
     <string name="Descrip_carneCruda">La carne cruda es la carne que no ha sido cocinada ni sometida a ningún proceso de conservación. Se puede consumir de diferentes formas, como el tartar, el carpaccio, el ceviche o el sushi. Sin embargo, comer carne cruda puede tener riesgos para la salud, ya que puede contener bacterias, parásitos, virus o toxinas que pueden provocar enfermedades como la salmonelosis, la triquinosis, la toxoplasmosis o la listeriosis</string>
