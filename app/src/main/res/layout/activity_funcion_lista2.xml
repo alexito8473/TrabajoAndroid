@@ -13,7 +13,6 @@
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:background="@color/fondo_oscuro"
-        android:fontFamily="@font/gordita"
         android:text="@string/accederMenu"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -25,7 +24,6 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/gordita"
         android:text="@string/nombre_restaurant"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -53,7 +51,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="30dp"
-            android:fontFamily="@font/gordita"
             android:text="@string/ContCarne" />
 
         <com.google.android.material.chip.Chip
@@ -62,7 +59,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="80dp"
-            android:fontFamily="@font/gordita"
             android:text="@string/ContVerdura" />
 
         <com.google.android.material.chip.Chip
@@ -70,7 +66,6 @@
             style="@style/stChipEntry"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/gordita"
             android:text="@string/ContienePostre" />
 
         <com.google.android.material.chip.Chip
@@ -78,7 +73,6 @@
             style="@style/stChipEntry"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/gordita"
             android:text="@string/TieneBebida" />
     </com.google.android.material.chip.ChipGroup>
 

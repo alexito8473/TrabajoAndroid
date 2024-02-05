@@ -13,7 +13,6 @@
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
-        android:fontFamily="@font/gordita"
         android:text="Nombre"
         android:textColor="@color/black"
         android:textSize="25sp"

@@ -49,7 +49,7 @@ class ListaComida {
             Comida(
                 context.getString(string.Bistek),
                 true,
-                R.drawable.carne,
+                R.drawable.bistek,
                 12.2,
                 context.getString(string.Descrip_Bistek),
                 false,

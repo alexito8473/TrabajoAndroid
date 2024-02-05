@@ -23,7 +23,6 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/gordita"
         android:text="@string/nombre_restaurant"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -33,13 +32,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ToggleButton
+        android:id="@+id/toggleButton"
+        style="@style/stToggle"
         android:layout_width="150dp"
         android:layout_height="70dp"
         android:background="@drawable/sl_toggle"
         android:onClick="prueba"
-        android:textOff="@string/TogleOf"
-        android:textOn="@string/TogleOn"
-        style="@style/stToggle"
+        android:textOff=" "
+        android:textOn=" "
         app:layout_constraintBottom_toTopOf="@+id/cardFuncionLista3Controlador"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,5 +61,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"></ListView>
     </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textFuncionLista3Tipo"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butFuncionLista3Volver" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
