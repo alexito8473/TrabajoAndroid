@@ -12,7 +12,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/ic_ultrarestaurant" />
-
     <TextView
         android:id="@+id/textRegistrarseMostrarTitulo"
         android:layout_width="0dp"
@@ -20,7 +19,7 @@
         android:gravity="center"
         android:text="Crear una cuenta"
         android:textColor="@color/black"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/imagenRegistraseVolver"
         app:layout_constraintStart_toEndOf="@+id/imRegistrarseMostrarLogo"
         app:layout_constraintTop_toTopOf="parent" />
@@ -40,27 +39,28 @@
 
     <EditText
         android:id="@+id/edTextResgistroUsuario"
+        style="@style/stText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
         android:ems="10"
         android:hint="Nombre"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/edTextResgistroEmail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textRegistrarseMostrarTitulo"
-/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textRegistrarseMostrarTitulo" />
 
     <EditText
         android:id="@+id/edTextResgistroEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
         android:ems="10"
         android:hint="Email"
+        style="@style/stText"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/edTextResgistroPassword"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edTextResgistroUsuario" />
 
     <EditText
@@ -69,28 +69,41 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
         android:ems="10"
-        android:hint="password"
+        android:hint="password" style="@style/stText"
         android:inputType="textPassword"
-        app:layout_constraintTop_toBottomOf="@+id/edTextResgistroEmail"
-        app:layout_constraintBottom_toTopOf="@+id/textFecha"
-        tools:layout_editor_absoluteX="162dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textResgistroFecha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edTextResgistroEmail" />
 
     <TextView
-        android:id="@+id/textFecha"
+        android:id="@+id/textResgistroFecha"
+        style="@style/stText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="108dp"
-        android:layout_marginBottom="20dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/caladarRegistro"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <CalendarView
-        android:id="@+id/caladarRegistro"
-        android:layout_width="289dp"
-        android:layout_height="299dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="196dp"
+        android:text="Selecciona una fecha"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textFecha" />
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textRegistrarseMostrarTitulo" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="299dp"
+        android:layout_height="299dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textResgistroFecha">
+
+        <CalendarView
+            android:id="@+id/caladarRegistro"
+            style="@style/stCalendar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

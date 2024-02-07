@@ -15,4 +15,47 @@
         <item name="fontFamily">@font/gordita</item>
         <item name="android:windowBackground">@color/fondo_claro</item>
     </style>
+    <style name="stChipEntry" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="android:fontFamily">@font/gordita</item>
+        <item name="android:textColor">@drawable/sel_colortexto</item>
+        <item name="chipBackgroundColor">@color/fondo_oscuro</item>
+        <item name="chipStrokeColor">@color/fondo_claro</item>
+        <item name="chipStrokeWidth">3dp</item>
+    </style>
+    <style name="stToggle">
+        <item name="android:fontFamily">@font/gordita</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="stImageGoogle" >
+        <item name="cornerSizeTopRight">50%</item>
+        <item name="cornerFamilyTopRight">cut</item>
+        <item name="cornerSizeTopLeft">50%</item>
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerSizeBottomLeft">50%</item>
+        <item name="cornerFamilyBottomLeft">cut</item>
+        <item name="cornerSizeBottomRight">50%</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+    </style>
+    <style name="stImageGoogleV2" >
+        <item name="cornerSizeTopRight">50%</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeTopLeft">50%</item>
+        <item name="cornerFamilyTopLeft">cut</item>
+        <item name="cornerSizeBottomLeft">50%</item>
+        <item name="cornerFamilyBottomLeft">rounded</item>
+        <item name="cornerSizeBottomRight">50%</item>
+        <item name="cornerFamilyBottomRight">cut</item>
+    </style>
+
+    <style name="stCardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">12dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="stText" >
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/cardview_dark_background</item>
+        <item name="android:colorActivatedHighlight">@color/fondo_oscuro</item>
+    </style>
 </resources>
