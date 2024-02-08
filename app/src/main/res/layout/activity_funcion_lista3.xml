@@ -77,7 +77,7 @@
     <ProgressBar
         android:id="@+id/proFuncionLista3Barra"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="maç"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/cardFuncionLista3Controlador"
         app:layout_constraintEnd_toEndOf="parent"

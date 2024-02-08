@@ -11,6 +11,7 @@ class MenuActivity : AppCompatActivity() {
     private lateinit var botonFuncionLista1: CardView
     private lateinit var botonFuncionLista2: CardView
     private lateinit var botonFuncionLista3: CardView
+    private lateinit var botonFuncionLista4: CardView
     private lateinit var botonFuncionWeb: CardView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +25,7 @@ class MenuActivity : AppCompatActivity() {
         botonFuncionLista1 = findViewById(R.id.cardMenuFuncionLista)
         botonFuncionLista2 = findViewById(R.id.cardMenuFuncionLista2)
         botonFuncionLista3 = findViewById(R.id.cardMenuFuncionLista3)
+        botonFuncionLista4 = findViewById(R.id.cardMenuFuncionLista4)
         botonFuncionWeb= findViewById(R.id.cardMenuWeb)
     }
 
@@ -39,6 +41,9 @@ class MenuActivity : AppCompatActivity() {
         }
         botonFuncionLista3.setOnClickListener {
             startActivity(Intent(this, FuncionLista3Activity::class.java))
+        }
+        botonFuncionLista4.setOnClickListener {
+            startActivity(Intent(this, FuncionLista4Activity::class.java))
         }
         botonFuncionWeb.setOnClickListener {
             startActivity(Intent(this, WebActivity::class.java))

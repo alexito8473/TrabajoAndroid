@@ -16,6 +16,9 @@
         android:theme="@style/Theme.TrabajoAndroid"
         tools:targetApi="31">
         <activity
+            android:name=".View.FuncionLista4Activity"
+            android:exported="false" />
+        <activity
             android:name=".View.RegistrarseActivity"
             android:exported="false" />
         <activity

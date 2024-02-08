@@ -17,6 +17,7 @@ import com.example.trabajoandroid.ViewModel.ComidaAdapterV2
 import com.example.trabajoandroid.ViewModel.ListaComida
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import java.lang.Thread.sleep
 
 class FuncionLista3Activity : AppCompatActivity() {
     private lateinit var listView: ListView
@@ -34,27 +35,16 @@ class FuncionLista3Activity : AppCompatActivity() {
         establecerVariablesID()
         establecerVariables()
         estableverEscucha()
-        GlobalScope.launch {
-            proguess(proContinuacion)
-        }
+
     }
 
-    @RequiresApi(Build.VERSION_CODES.O)
     private fun establecerVariablesID() {
         listView = findViewById(R.id.listFuncionLista3Mostrar);
         butMenu = findViewById(R.id.butFuncionLista3Volver)
         textoTipo = findViewById(R.id.textFuncionLista3Tipo)
         proContinuacion = findViewById(R.id.proFuncionLista3Barra)
         proContinuacion.progress = 0
-        proContinuacion.max = 50
-    }
-
-    private fun proguess(pb: ProgressBar?) {
-        if (pb != null) {
-            while (pb.progress < pb.max) {
-                pb.incrementProgressBy(1)
-            }
-        }
+        proContinuacion.max = 100
     }
 
     private fun establecerVariables() {
@@ -64,7 +54,6 @@ class FuncionLista3Activity : AppCompatActivity() {
         adapter = ComidaAdapterV2(this, listaMostrar)
         listView.adapter = adapter;
     }
-
     private fun estableverEscucha() {
         butMenu.setOnClickListener {
             startActivity(Intent(this, MenuActivity::class.java))
@@ -77,7 +66,10 @@ class FuncionLista3Activity : AppCompatActivity() {
     }
 
     fun prueba(view: View) {
-
+        proContinuacion.progress=0
+        GlobalScope.launch {
+            proguess(proContinuacion)
+        }
         if (!(view as ToggleButton).isChecked) {
             listaMostrar.clear()
             listaMostrar.addAll(listaTotalComida.filter { t -> t.tieneCarne() })
@@ -88,5 +80,13 @@ class FuncionLista3Activity : AppCompatActivity() {
             textoTipo.text = getString(R.string.TogleOf);
         }
         adapter.notifyDataSetChanged()
+    }
+    private fun proguess(pb: ProgressBar?) {
+        if (pb != null) {
+            while (pb.progress < pb.max) {
+                pb.incrementProgressBy(5)
+                sleep(7);
+            }
+        }
     }
 }
