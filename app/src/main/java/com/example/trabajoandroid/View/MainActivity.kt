@@ -2,6 +2,7 @@ package com.example.trabajoandroid.View
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.ImageView
 import android.widget.ListView
@@ -20,6 +21,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var listView: ListView
     private lateinit var adapter: ComidaAdapter
     private lateinit var botonDesplazamiento: AppCompatButton
+    private lateinit var comidas_array:Array<String>
+    private lateinit var adpatorComidasSee:ArrayAdapter<String>
     private var listaTotalComida: MutableList<Comida> = mutableListOf()
     private var listaMostrar: MutableList<Comida> = mutableListOf()
     private var listaReserva: MutableList<Comida> = mutableListOf()
@@ -37,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         listView = findViewById(R.id.lista);
         switchCarne = findViewById(R.id.switchMainSoloCarne)
         botonDesplazamiento = findViewById(R.id.butMainGoMenu)
+
     }
 
     private fun establecerVariables() {
@@ -44,7 +48,10 @@ class MainActivity : AppCompatActivity() {
         listaMostrar.addAll(listaTotalComida)
         listaReserva.addAll(listaTotalComida)
         adapter = ComidaAdapter(this, listaMostrar)
-        listView.adapter = adapter;
+        listView.adapter = adapter
+        comidas_array=resources.getStringArray(R.array.valores_comida)
+        adpatorComidasSee= ArrayAdapter<String>(this,android.R.layout.simple_dropdown_item_1line,comidas_array)
+        autoCompleteBuscador.setAdapter(adpatorComidasSee)
     }
 
     private fun establecerEscucha() {

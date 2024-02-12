@@ -2,7 +2,9 @@ package com.example.trabajoandroid.View
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.ListView
+import android.widget.ProgressBar
 import android.widget.SeekBar
 import android.widget.SeekBar.OnSeekBarChangeListener
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +14,8 @@ import com.example.trabajoandroid.Model.Comida
 import com.example.trabajoandroid.R
 import com.example.trabajoandroid.ViewModel.ComidaAdapterV3
 import com.example.trabajoandroid.ViewModel.ListaComida
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class FuncionLista4Activity : AppCompatActivity() {
     private lateinit var listView: ListView
@@ -19,6 +23,7 @@ class FuncionLista4Activity : AppCompatActivity() {
     private lateinit var butMenu: AppCompatButton
     private lateinit var seekControl: SeekBar
     private lateinit var searchControl: SearchView
+    private lateinit var progescontrolador: ProgressBar
     private var filtradoText: String = ""
     private var seekControlPosicion: Int = 0
     private var listaTotalComida: MutableList<Comida> = mutableListOf()
@@ -37,6 +42,11 @@ class FuncionLista4Activity : AppCompatActivity() {
         butMenu = findViewById(R.id.butFuncionLista4Volver)
         seekControl = findViewById(R.id.seekBarFuncionLista4Control)
         searchControl = findViewById(R.id.searchFuncionLista4Controlar)
+        progescontrolador = findViewById(R.id.proBarFuncionLista4)
+        GlobalScope.launch {
+            Thread.sleep(850)
+            progescontrolador.visibility = View.INVISIBLE;
+        }
     }
 
     private fun establecerVariables() {

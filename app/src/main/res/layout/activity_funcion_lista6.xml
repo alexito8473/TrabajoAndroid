@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.FuncionLista6Activity">
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butFuncionLista6Volver"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@color/fondo_oscuro"
+        android:fontFamily="@font/gordita"
+        android:text="@string/accederMenu"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFuncionLista6Titulo" />
+
+    <TextView
+        android:id="@+id/textFuncionLista6Titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nombre_restaurant"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardFuncionLista4Controlador"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="320dp"
+        app:cardBackgroundColor="@color/fondo_oscuro_menosVisibilidad"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textFuncionLista6Titulo">
+
+        <ListView
+            android:id="@+id/listFuncionLista4Mostrar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

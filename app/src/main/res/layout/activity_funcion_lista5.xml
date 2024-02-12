@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.FuncionLIsta5Activity">
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/butFuncionLista5Volver"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@color/fondo_oscuro"
+        android:fontFamily="@font/gordita"
+        android:text="@string/accederMenu"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFuncionLista5Titulo" />
+
+    <TextView
+        android:id="@+id/textFuncionLista5Titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nombre_restaurant"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardFuncionLista5Controlador"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="270dp"
+        app:cardBackgroundColor="@color/fondo_oscuro_menosVisibilidad"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <GridView
+            android:id="@+id/gridFuncionLista5Lista"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:horizontalSpacing="15dp"
+            android:numColumns="auto_fit"
+            android:padding="10dp"
+            android:verticalSpacing="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.cardview.widget.CardView>
+
+    <NumberPicker
+        android:id="@+id/numPickerFuncionLista5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/fondo_oscuro_menosVisibilidad"
+        android:solidColor="@color/fondo_oscuro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butFuncionLista5Volver" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

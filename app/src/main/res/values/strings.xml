@@ -9,6 +9,7 @@
     <string name="FuncionLista2">Función lista 2</string>
     <string name="FuncionLista3">Función lista 3</string>
     <string name="FuncionLista4">Función lista 4</string>
+    <string name="FuncionLista5">Función lista 5</string>
     <string name="FuncionWeb">Función web</string>
 
     <string name="Descrip_scones">Los scones son unos panecillos típicos de la cocina inglesa, que se suelen servir con té, crema batida y mermelada. Tienen una textura suave y esponjosa, y se pueden preparar con diferentes ingredientes, como arándanos, queso, pasas o frutos secos.</string>
@@ -58,7 +59,7 @@
     <string name="MenosDe20">Menos de 20€</string>
     <string name="fecha_favorita">Seleccione tu fecha favorita</string>
     <string name="es_mayor_18">¿Es mayor de 18 años?</string>
-    <string name="buscador">Buscador:</string>
+    <string name="buscador">Buscador...</string>
     <string-array name="valores_comida">
         <item> Scones </item>
         <item> Super scones </item>
