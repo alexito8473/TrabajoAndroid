@@ -26,7 +26,7 @@ class MenuActivity : AppCompatActivity() {
         botonFuncionLista2 = findViewById(R.id.cardMenuFuncionLista2)
         botonFuncionLista3 = findViewById(R.id.cardMenuFuncionLista3)
         botonFuncionLista4 = findViewById(R.id.cardMenuFuncionLista4)
-        botonFuncionWeb= findViewById(R.id.cardMenuWeb)
+        botonFuncionWeb = findViewById(R.id.cardMenuWeb)
     }
 
     private fun establecerEscucha() {

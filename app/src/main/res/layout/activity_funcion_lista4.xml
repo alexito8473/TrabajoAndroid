@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fondo_claro"
     tools:context=".View.FuncionLista4Activity">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchFuncionLista4Controlar"
+        style="@style/AppSearchViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butFuncionLista4Volver"
+        app:layout_constraintVertical_bias="0.347" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/butFuncionLista4Volver"
@@ -58,12 +71,13 @@
         android:layout_marginEnd="44dp"
         android:layout_marginBottom="12dp"
         android:text="Verdura"
-        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/seekBarFuncionLista4Control"
         app:layout_constraintEnd_toStartOf="@+id/textView5" />
 
 
     <SeekBar
-        android:id="@+id/seekBar"
+        android:id="@+id/seekBarFuncionLista4Control"
         style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -71,6 +85,8 @@
         android:layout_marginEnd="10dp"
         android:max="3"
         android:progress="0"
+        android:scrollbarThumbHorizontal="@color/fondo_oscuro"
+        android:thumbTint="@color/fondo_oscuro"
         app:layout_constraintBottom_toTopOf="@+id/cardFuncionLista4Controlador"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -85,7 +101,8 @@
         android:layout_marginStart="4dp"
         android:layout_marginBottom="12dp"
         android:text="Todo"
-        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/seekBarFuncionLista4Control"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -95,7 +112,8 @@
         android:layout_marginStart="48dp"
         android:layout_marginBottom="12dp"
         android:text="Carne"
-        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/seekBarFuncionLista4Control"
         app:layout_constraintStart_toEndOf="@+id/textView2" />
 
     <TextView
@@ -104,17 +122,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
         android:text="Postre"
-        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/seekBarFuncionLista4Control"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <SearchView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/butFuncionLista4Volver"
-        app:layout_constraintVertical_bias="0.347" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,10 +7,10 @@ import android.widget.ListView
 import android.widget.RadioButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
-import com.example.trabajoandroid.ViewModel.ComidaAdapter
-import com.example.trabajoandroid.ViewModel.ListaComida
 import com.example.trabajoandroid.Model.Comida
 import com.example.trabajoandroid.R
+import com.example.trabajoandroid.ViewModel.ComidaAdapter
+import com.example.trabajoandroid.ViewModel.ListaComida
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 
@@ -48,7 +48,7 @@ class FuncionLista2Activity : AppCompatActivity() {
         radioTotal = findViewById(R.id.radFuncionLista2Total)
         radioMenos = findViewById(R.id.radFuncionLista2Menos)
         radioMas = findViewById(R.id.radFuncionLista2Mas)
-        butMenu=findViewById(R.id.butFuncionLista2Volver)
+        butMenu = findViewById(R.id.butFuncionLista2Volver)
     }
 
     private fun establecerVariables() {

@@ -2,20 +2,20 @@ package com.example.trabajoandroid.View
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.EditText
+import android.widget.AutoCompleteTextView
 import android.widget.ImageView
 import android.widget.ListView
 import android.widget.Switch
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
-import com.example.trabajoandroid.ViewModel.ComidaAdapter
-import com.example.trabajoandroid.ViewModel.ListaComida
 import com.example.trabajoandroid.Model.Comida
 import com.example.trabajoandroid.R
+import com.example.trabajoandroid.ViewModel.ComidaAdapter
+import com.example.trabajoandroid.ViewModel.ListaComida
 
 class MainActivity : AppCompatActivity() {
     private lateinit var botBuscador: ImageView
-    private lateinit var editBuscador: EditText
+    private lateinit var autoCompleteBuscador: AutoCompleteTextView
     private lateinit var switchCarne: Switch
     private lateinit var listView: ListView
     private lateinit var adapter: ComidaAdapter
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun establecerVariablesID() {
-        editBuscador = findViewById(R.id.editTextMainBuscador)
+        autoCompleteBuscador = findViewById(R.id.editTextMainBuscador)
         botBuscador = findViewById(R.id.butMainBuscador)
         listView = findViewById(R.id.lista);
         switchCarne = findViewById(R.id.switchMainSoloCarne)
@@ -67,22 +67,22 @@ class MainActivity : AppCompatActivity() {
     private fun botonBuscador() {
         listaMostrar.clear()
         if (switchCarne.isChecked) {
-            if (editBuscador.text.toString().isBlank()) {
+            if (autoCompleteBuscador.text.toString().isBlank()) {
                 listaMostrar.addAll(listaTotalComida.filter { t -> t.tieneCarne() }.toList())
             } else {
                 listaMostrar.addAll(listaReserva.filter { t ->
                     t.getNombre().lowercase().contains(
-                        editBuscador.text.toString().lowercase()
+                        autoCompleteBuscador.text.toString().lowercase()
                     )
                 }.filter { t -> t.tieneCarne() })
             }
         } else {
-            if (editBuscador.text.toString().isBlank()) {
+            if (autoCompleteBuscador.text.toString().isBlank()) {
                 listaMostrar.addAll(listaTotalComida)
             } else {
                 listaMostrar.addAll(listaTotalComida.filter { t ->
                     t.getNombre().lowercase().contains(
-                        editBuscador.text.toString().lowercase()
+                        autoCompleteBuscador.text.toString().lowercase()
                     )
                 })
             }
@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
             listaMostrar.clear()
             listaMostrar.addAll(listaReserva.filter { t -> t.tieneCarne() }.toList())
         } else {
-            if (editBuscador.text.toString().isBlank()) {
+            if (autoCompleteBuscador.text.toString().isBlank()) {
                 listaMostrar.clear()
                 listaMostrar.addAll(listaTotalComida)
             } else {

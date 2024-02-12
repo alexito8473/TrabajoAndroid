@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/fondo_claro"
     tools:context=".View.FuncionLista3Activity">
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/butFuncionLista3Volver"
         android:layout_width="250dp"

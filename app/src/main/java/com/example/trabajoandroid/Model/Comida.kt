@@ -12,16 +12,27 @@ class Comida : Serializable {
     private var isPostre: Boolean
     private var videoPath: String
     private var valoracion: Float
-    constructor(nombre: String,tieneCarne: Boolean,imagenComida: Int,precio: Double,descripcion: String,isBebida: Boolean,isPostre: Boolean,videoPath: String,valoracion: Float) {
+
+    constructor(
+        nombre: String,
+        tieneCarne: Boolean,
+        imagenComida: Int,
+        precio: Double,
+        descripcion: String,
+        isBebida: Boolean,
+        isPostre: Boolean,
+        videoPath: String,
+        valoracion: Float
+    ) {
         this.nombre = nombre
-        this.tieneCarne=tieneCarne
-        this.imagenComida=imagenComida
-        this.precio=precio
-        this.descripcion=descripcion
-        this.isBebida=isBebida
-        this.isPostre=isPostre
-        this.videoPath=videoPath
-        this.valoracion=valoracion
+        this.tieneCarne = tieneCarne
+        this.imagenComida = imagenComida
+        this.precio = precio
+        this.descripcion = descripcion
+        this.isBebida = isBebida
+        this.isPostre = isPostre
+        this.videoPath = videoPath
+        this.valoracion = valoracion
     }
 
     fun getNombre(): String {
@@ -51,9 +62,11 @@ class Comida : Serializable {
     fun isPostre(): Boolean {
         return isPostre;
     }
+
     fun getVideoPath(): String {
         return videoPath;
     }
+
     fun getValoracion(): Float {
         return valoracion;
     }

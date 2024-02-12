@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".View.RegistrarseActivity">
+
     <ImageView
         android:id="@+id/imRegistrarseMostrarLogo"
         android:layout_width="0dp"
@@ -12,6 +13,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/ic_ultrarestaurant" />
+
     <TextView
         android:id="@+id/textRegistrarseMostrarTitulo"
         android:layout_width="0dp"
@@ -29,9 +31,9 @@
         android:layout_width="60dp"
         android:layout_height="80dp"
         android:background="@color/fondo_claro"
-        android:tint="@color/fondo_oscuro"
         android:scaleX="1.6"
         android:scaleY="1.6"
+        android:tint="@color/fondo_oscuro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_delete"
@@ -52,11 +54,11 @@
 
     <EditText
         android:id="@+id/edTextResgistroEmail"
+        style="@style/stText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Email"
-        style="@style/stText"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/edTextResgistroPassword"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,11 +67,12 @@
 
     <EditText
         android:id="@+id/edTextResgistroPassword"
+        style="@style/stText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
         android:ems="10"
-        android:hint="password" style="@style/stText"
+        android:hint="password"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/textResgistroFecha"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,7 +85,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="196dp"
-        android:text="Selecciona una fecha"
+        android:text="@string/fecha_favorita"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -90,6 +93,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textRegistrarseMostrarTitulo" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardResgistro"
         android:layout_width="299dp"
         android:layout_height="299dp"
         android:layout_marginTop="30dp"
@@ -104,6 +108,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </androidx.cardview.widget.CardView>
+
+    <CheckBox
+        android:id="@+id/chBxResgistroEsMayor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/es_mayor_18"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.182"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardResgistro"
+        app:layout_constraintVertical_bias="0.093" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

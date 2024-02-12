@@ -103,31 +103,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cgFuncionLista2Controlador">
 
-    <RadioButton
-        android:id="@+id/radFuncionLista2Total"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:buttonTint="@color/fondo_oscuro"
-        android:checked="true"
-        android:textColor="@color/black"
-        android:text="@string/cualquierTipo"
-        android:onClick="onPrecio"/>
+        <RadioButton
+            android:id="@+id/radFuncionLista2Total"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:buttonTint="@color/fondo_oscuro"
+            android:checked="true"
+            android:onClick="onPrecio"
+            android:text="@string/cualquierTipo"
+            android:textColor="@color/black" />
 
-    <RadioButton
-        android:id="@+id/radFuncionLista2Menos"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:textColor="@color/black"
-        android:buttonTint="@color/fondo_oscuro"
-        android:text="@string/MenosDe20"
-        android:onClick="onPrecio"/>
-    <RadioButton
-        android:id="@+id/radFuncionLista2Mas"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:textColor="@color/black"
-        android:buttonTint="@color/fondo_oscuro"
-        android:text="@string/masDe20"
-        android:onClick="onPrecio"/>
-</RadioGroup>
+        <RadioButton
+            android:id="@+id/radFuncionLista2Menos"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:buttonTint="@color/fondo_oscuro"
+            android:onClick="onPrecio"
+            android:text="@string/MenosDe20"
+            android:textColor="@color/black" />
+
+        <RadioButton
+            android:id="@+id/radFuncionLista2Mas"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:buttonTint="@color/fondo_oscuro"
+            android:onClick="onPrecio"
+            android:text="@string/masDe20"
+            android:textColor="@color/black" />
+    </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

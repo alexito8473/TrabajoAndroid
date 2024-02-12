@@ -3,35 +3,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/fondo_claro"
     android:layout_height="match_parent"
+    android:background="@color/fondo_claro"
     tools:context=".View.MenuActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardMenuInicioSesion"
         android:layout_width="250dp"
         android:layout_height="70dp"
-        app:cardCornerRadius="15dp"
         app:cardBackgroundColor="@color/fondo_complementaro"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:cardCornerRadius="15dp"
         app:layout_constraintBottom_toTopOf="@+id/cardMenuFuncionLista"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <TextView
             android:layout_width="match_parent"
-            android:textColor="@color/black"
-            android:textSize="30sp"
-            android:gravity="center"
             android:layout_height="match_parent"
-            android:text="@string/Iniciar_Sesion" />
+            android:gravity="center"
+            android:text="@string/Iniciar_Sesion"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardMenuFuncionLista"
         android:layout_width="250dp"
         android:layout_height="70dp"
-        app:cardCornerRadius="15dp"
         app:cardBackgroundColor="@color/fondo_complementaro"
+        app:cardCornerRadius="15dp"
         app:layout_constraintBottom_toTopOf="@+id/cardMenuFuncionLista2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,6 +66,7 @@
             android:textColor="@color/black"
             android:textSize="30sp" />
     </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardMenuFuncionLista3"
         android:layout_width="250dp"
@@ -84,6 +86,7 @@
             android:textColor="@color/black"
             android:textSize="30sp" />
     </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardMenuFuncionLista4"
         android:layout_width="250dp"
@@ -103,6 +106,7 @@
             android:textColor="@color/black"
             android:textSize="30sp" />
     </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardMenuWeb"
         android:layout_width="250dp"

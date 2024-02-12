@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:visibility="visible"
     android:layout_width="match_parent"
-    android:layout_height="150dp">
+    android:layout_height="150dp"
+    android:visibility="visible">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imagenICV3Comida"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:background="@color/fondo_oscuro_menosVisibilidad_menos"
         android:fontFamily="@font/gordita"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintBottom_toBottomOf="@+id/divider"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.466"
         app:shapeAppearanceOverlay="@style/stImageGoogleV3"
         app:srcCompat="@drawable/carne"
         app:strokeColor="@color/fondo_oscuro"
         app:strokeWidth="5dp" />
-
 
     <TextView
         android:id="@+id/texICV3Nombre"
@@ -30,6 +27,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toEndOf="@+id/imagenICV3Comida"
@@ -39,21 +38,22 @@
         android:id="@+id/ratingICV3Valoracion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:progressTint="@color/naranjaAmarillo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toEndOf="@+id/imagenICV3Comida"
         app:layout_constraintTop_toBottomOf="@+id/texICV3Nombre"
-        android:isIndicator="true"
-        android:numStars="5"
         app:layout_constraintVertical_bias="0.705" />
 
     <View
         android:id="@+id/divider"
         android:layout_width="4dp"
         android:layout_height="0dp"
-        android:backgroundTint="@color/fondo_oscuro"
         android:background="?android:attr/listDivider"
+        android:backgroundTint="@color/fondo_oscuro"
         app:layout_constraintEnd_toStartOf="@+id/ratingICV3Valoracion"
         app:layout_constraintStart_toEndOf="@+id/imagenICV3Comida"
         app:layout_constraintTop_toTopOf="parent" />
@@ -63,11 +63,11 @@
         android:layout_width="0dp"
         android:layout_height="5dp"
         android:layout_marginTop="12dp"
-        android:backgroundTint="@color/fondo_oscuro"
         android:background="?android:attr/listDivider"
+        android:backgroundTint="@color/fondo_oscuro"
+        app:layout_constraintBottom_toTopOf="@id/ratingICV3Valoracion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintBottom_toTopOf="@id/ratingICV3Valoracion"
         app:layout_constraintStart_toEndOf="@+id/divider"
         app:layout_constraintTop_toBottomOf="@+id/texICV3Nombre" />
 
@@ -75,8 +75,8 @@
         android:id="@+id/divider3"
         android:layout_width="match_parent"
         android:layout_height="5dp"
-        android:backgroundTint="@color/fondo_oscuro"
         android:background="?android:attr/listDivider"
+        android:backgroundTint="@color/fondo_oscuro"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

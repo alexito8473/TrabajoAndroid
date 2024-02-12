@@ -9,48 +9,45 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/butMainGoMenu"
-        android:textColor="@color/black"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:textSize="20sp"
-        android:text="@string/accederMenu"
         android:background="@color/fondo_oscuro"
+        android:text="@string/accederMenu"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/editTextMainBuscador"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
-        android:textAlignment="center"
-        android:textColor="@color/black"
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/nombre_restaurant"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:layout_marginStart="10dp"
-        android:textColor="@color/black"
-        android:outlineAmbientShadowColor="@color/black"
-        android:focusedSearchResultHighlightColor="@color/black"
-        android:shadowColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textColorHighlight="@color/black"
-        android:searchResultHighlightColor="@color/black"
-        android:outlineSpotShadowColor="@color/black"
+    <AutoCompleteTextView
         android:id="@+id/editTextMainBuscador"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="68dp"
-        android:hint="Buscador:"
+        android:layout_marginStart="10dp"
         android:drawableTint="@color/black"
+        android:focusedSearchResultHighlightColor="@color/black"
+        android:hint="@string/buscador"
+        android:outlineAmbientShadowColor="@color/black"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/switchMainSoloCarne"
         app:layout_constraintEnd_toStartOf="@+id/butMainBuscador"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/butMainGoMenu"
+        tools:layout_editor_absoluteY="170dp" />
 
     <ImageView
         android:id="@+id/butMainBuscador"
@@ -58,14 +55,13 @@
         android:layout_height="50dp"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
-        android:scaleX="1.5"
-        android:scaleY="1.5"
+        android:scaleX="1.8"
+        android:scaleY="1.8"
         android:src="@mipmap/ic_lupa_foreground"
-        app:layout_constraintBottom_toTopOf="@+id/cardMainControlador"
+        app:layout_constraintBottom_toTopOf="@+id/switchMainSoloCarne"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editTextMainBuscador"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.413" />
+        app:layout_constraintTop_toBottomOf="@+id/butMainGoMenu" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardMainControlador"
@@ -85,21 +81,21 @@
     </androidx.cardview.widget.CardView>
 
     <Switch
-        android:textSize="20sp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:textColor="@color/black"
         android:id="@+id/switchMainSoloCarne"
         android:layout_width="0dp"
         android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:checked="false"
+        android:fontFamily="@font/gordita"
         android:text="Solo carne"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         android:thumb="@mipmap/ic_carne_foreground"
         app:layout_constraintBottom_toTopOf="@+id/cardMainControlador"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextMainBuscador" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

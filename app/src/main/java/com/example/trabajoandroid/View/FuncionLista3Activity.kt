@@ -1,14 +1,12 @@
 package com.example.trabajoandroid.View
 
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.ListView
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.ToggleButton
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import com.example.trabajoandroid.Model.Comida
@@ -28,7 +26,6 @@ class FuncionLista3Activity : AppCompatActivity() {
     private var listaTotalComida: MutableList<Comida> = mutableListOf()
     private var listaMostrar: MutableList<Comida> = mutableListOf()
 
-    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_funcion_lista3)
@@ -54,6 +51,7 @@ class FuncionLista3Activity : AppCompatActivity() {
         adapter = ComidaAdapterV2(this, listaMostrar)
         listView.adapter = adapter;
     }
+
     private fun estableverEscucha() {
         butMenu.setOnClickListener {
             startActivity(Intent(this, MenuActivity::class.java))
@@ -66,7 +64,7 @@ class FuncionLista3Activity : AppCompatActivity() {
     }
 
     fun prueba(view: View) {
-        proContinuacion.progress=0
+        proContinuacion.progress = 0
         GlobalScope.launch {
             proguess(proContinuacion)
         }
@@ -81,6 +79,7 @@ class FuncionLista3Activity : AppCompatActivity() {
         }
         adapter.notifyDataSetChanged()
     }
+
     private fun proguess(pb: ProgressBar?) {
         if (pb != null) {
             while (pb.progress < pb.max) {

@@ -10,6 +10,22 @@
     <string name="FuncionLista3">Función lista 3</string>
     <string name="FuncionLista4">Función lista 4</string>
     <string name="FuncionWeb">Función web</string>
+
+    <string name="Descrip_scones">Los scones son unos panecillos típicos de la cocina inglesa, que se suelen servir con té, crema batida y mermelada. Tienen una textura suave y esponjosa, y se pueden preparar con diferentes ingredientes, como arándanos, queso, pasas o frutos secos.</string>
+    <string name="Descrip_superScones"> Los scones son unos bocadillos dulces o salados que se originaron en Escocia y que se popularizaron en el Reino Unido y otros países. Se elaboran con una masa de harina, mantequilla, azúcar y leche, a la que se le puede añadir frutas, queso o especias.</string>
+    <string name="Descrip_carneCruda">La carne cruda es la carne que no ha sido cocinada ni sometida a ningún proceso de conservación. Se puede consumir de diferentes formas, como el tartar, el carpaccio, el ceviche o el sushi. Sin embargo, comer carne cruda puede tener riesgos para la salud, ya que puede contener bacterias, parásitos, virus o toxinas que pueden provocar enfermedades como la salmonelosis, la triquinosis, la toxoplasmosis o la listeriosis</string>
+    <string name="Descrip_Bistek">La carne cruda es la carne que no ha sido cocinada ni sometida a ningún proceso de conservación. Se puede consumir de diferentes formas, como el tartar, el carpaccio, el ceviche o el sushi. Sin embargo, comer carne cruda puede tener riesgos para la salud, ya que puede contener bacterias, parásitos, virus o toxinas que pueden provocar enfermedades como la salmonelosis, la triquinosis, la toxoplasmosis o la listeriosis</string>
+    <string name="Descrip_coccaCola">La Coca-Cola es una bebida gaseosa de color marrón oscuro, que tiene un sabor dulce y refrescante. Se elabora con un concentrado de extractos de plantas, como la hoja de coca y la nuez de cola, y se endulza con azúcar o edulcorantes artificiales.</string>
+    <string name="Descrip_supDesay">El desayuno con huevos con verduras es una opción saludable y equilibrada para empezar el día con energía y nutrientes. Los huevos son una fuente de proteínas de alta calidad, que ayudan a mantener la masa muscular y a regular el apetito. Las verduras aportan vitaminas, minerales, antioxidantes y fibra, que favorecen el funcionamiento del sistema inmunitario, el tránsito intestinal y la prevención de enfermedades.</string>
+    <string name="Descrip_desaCompl">Un desayuno completo pero solo carne no es una opción muy saludable, ya que la carne es una fuente de proteínas, pero también de grasas saturadas, colesterol y sodio, que pueden aumentar el riesgo de enfermedades cardiovasculares, obesidad, diabetes o cáncer12. Además, al consumir solo carne, se estaría dejando de lado otros nutrientes esenciales que aport</string>
+    <string name="Descrip_ojoDeDios">Un desayuno de beicon y huevos es una receta tradicional de la cocina anglosajona, que se suele servir con pan tostado, mantequilla y mermelada. El beicon se fríe en una sartén hasta que quede crujiente, y los huevos se pueden hacer revueltos, fritos o escalfados, según el gusto de cada uno. El desayuno de beicon y huevos es una fuente de proteínas y energía, pero también de grasas y calorías, por lo que se recomienda consumirlo con moderación y acompañarlo de fruta o zumo natural</string>
+    <string name="Descrip_boCar">Las bolas de carne sazonado son unas croquetas de carne picada de ternera, mezclada con especias como el pimentón, el comino, la canela y la nuez moscada, y rebozadas con una masa de harina, agua y levadura. Se fríen en aceite caliente hasta que quedan crujientes por fuera y jugosas por dentro, y se sirven con salsa de tomate.</string>
+    <string name="Descrip_algoAzu">El algodón de azúcar es una golosina que se forma por hilos de azúcar derretido que se enrollan alrededor de un palo o un cono. Tiene una textura suave y esponjosa, y se disuelve en la boca al contacto con la saliva. El algodón de azúcar suele tener un color rosa, pero también puede ser de otros colores, según el colorante que se le añada. Se elabora con una máquina especial que calienta el azúcar y lo hace girar a gran velocidad, creando los finos hilos que se recogen con un palo</string>
+    <string name="Descrip_beQue">El beicon es un producto cárnico que se obtiene de la panceta del cerdo, que es la parte ventral del animal. El beicon se somete a un proceso de salazón y ahumado, que le da un sabor intenso y un aroma característico. El beicon se puede consumir de diferentes formas, como frito, asado, horneado o crudo. Es un ingrediente muy utilizado en la cocina anglosajona, especialmente en el desayuno, donde se acompaña con huevos, pan y mermelada</string>
+    <string name="Descrip_buñuelos">El beicon es un producto cárnico que se obtiene de la panceta del cerdo, que es la parte ventral del animal. El beicon se somete a un proceso de salazón y ahumado, que le da un sabor intenso y un aroma característico. El beicon se puede consumir de diferentes formas, como frito, asado, horneado o crudo. Es un ingrediente muy utilizado en la cocina anglosajona, especialmente en el desayuno, donde se acompaña con huevos, pan y mermelada</string>
+    <string name="Descrip_polPoHec">El pollo al horno es una receta que consiste en cocinar un pollo entero o en trozos en el horno, con aceite, sal, pimienta y otras especias o hierbas aromáticas. El pollo al horno se suele acompañar de una guarnición de patatas, cebollas, zanahorias u otras verduras, que se asan junto al pollo y se impregnan de su jugo. El pollo al horno es un plato fácil de preparar, económico y nutritivo, que se puede adaptar al gusto de cada uno.</string>
+    <string name="Descrip_polFri">El pollo frito es una forma de cocinar el pollo que consiste en sumergirlo en aceite caliente después de haberlo rebozado con harina, pan rallado y especias. El pollo frito tiene una capa exterior crujiente y un interior tierno y jugoso. Es un plato muy popular en la gastronomía de muchos países, especialmente en Estados Unidos, donde se suele servir con salsa de barbacoa, puré de patatas o ensalada de col.</string>
+
     <string name="Scones">Scones</string>
     <string name="SuperScones">Super scones</string>
     <string name="CarneCruda">Carne cruda</string>
@@ -18,7 +34,7 @@
     <string name="SupDes">Super desayuno</string>
     <string name="DesaCom">Desayuno completo</string>
     <string name="OjoDedios">Ojo de dios</string>
-    <string name="BolasCarne">Bolas de carne sazonadao</string>
+    <string name="BolasCarne">Bolas de carne sazonada</string>
     <string name="AlgodonDeAzucar">Algodón de azucar</string>
     <string name="BeiQue">Beicon quemado</string>
     <string name="Buñuelos">Buñuelos</string>
@@ -40,34 +56,27 @@
     <string name="cualquierTipo">Cualquier precio</string>
     <string name="masDe20">Mas de 20€</string>
     <string name="MenosDe20">Menos de 20€</string>
-
-    <string name="Descrip_scones">Los scones son unos panecillos típicos de la cocina inglesa, que se suelen servir con té, crema batida y mermelada. Tienen una textura suave y esponjosa, y se pueden preparar con diferentes ingredientes, como arándanos, queso, pasas o frutos secos.</string>
-    <string name="Descrip_superScones"> Los scones son unos bocadillos dulces o salados que se originaron en Escocia y que se popularizaron en el Reino Unido y otros países. Se elaboran con una masa de harina, mantequilla, azúcar y leche, a la que se le puede añadir frutas, queso o especias.</string>
-    <string name="Descrip_carneCruda">La carne cruda es la carne que no ha sido cocinada ni sometida a ningún proceso de conservación. Se puede consumir de diferentes formas, como el tartar, el carpaccio, el ceviche o el sushi. Sin embargo, comer carne cruda puede tener riesgos para la salud, ya que puede contener bacterias, parásitos, virus o toxinas que pueden provocar enfermedades como la salmonelosis, la triquinosis, la toxoplasmosis o la listeriosis</string>
-    <string name="Descrip_Bistek">La carne cruda es la carne que no ha sido cocinada ni sometida a ningún proceso de conservación. Se puede consumir de diferentes formas, como el tartar, el carpaccio, el ceviche o el sushi. Sin embargo, comer carne cruda puede tener riesgos para la salud, ya que puede contener bacterias, parásitos, virus o toxinas que pueden provocar enfermedades como la salmonelosis, la triquinosis, la toxoplasmosis o la listeriosis</string>
-    <string name="Descrip_coccaCola">La Coca-Cola es una bebida gaseosa de color marrón oscuro, que tiene un sabor dulce y refrescante. Se elabora con un concentrado de extractos de plantas, como la hoja de coca y la nuez de cola, y se endulza con azúcar o edulcorantes artificiales.</string>
-    <string name="Descrip_supDesay">El desayuno con huevos con verduras es una opción saludable y equilibrada para empezar el día con energía y nutrientes. Los huevos son una fuente de proteínas de alta calidad, que ayudan a mantener la masa muscular y a regular el apetito. Las verduras aportan vitaminas, minerales, antioxidantes y fibra, que favorecen el funcionamiento del sistema inmunitario, el tránsito intestinal y la prevención de enfermedades.</string>
-    <string name="Descrip_desaCompl">Un desayuno completo pero solo carne no es una opción muy saludable, ya que la carne es una fuente de proteínas, pero también de grasas saturadas, colesterol y sodio, que pueden aumentar el riesgo de enfermedades cardiovasculares, obesidad, diabetes o cáncer12. Además, al consumir solo carne, se estaría dejando de lado otros nutrientes esenciales que aport</string>
-    <string name="Descrip_ojoDeDios">Un desayuno de beicon y huevos es una receta tradicional de la cocina anglosajona, que se suele servir con pan tostado, mantequilla y mermelada. El beicon se fríe en una sartén hasta que quede crujiente, y los huevos se pueden hacer revueltos, fritos o escalfados, según el gusto de cada uno. El desayuno de beicon y huevos es una fuente de proteínas y energía, pero también de grasas y calorías, por lo que se recomienda consumirlo con moderación y acompañarlo de fruta o zumo natural</string>
-    <string name="Descrip_boCar">Las bolas de carne sazonado son unas croquetas de carne picada de ternera, mezclada con especias como el pimentón, el comino, la canela y la nuez moscada, y rebozadas con una masa de harina, agua y levadura. Se fríen en aceite caliente hasta que quedan crujientes por fuera y jugosas por dentro, y se sirven con salsa de tomate.</string>
-    <string name="Descrip_algoAzu">El algodón de azúcar es una golosina que se forma por hilos de azúcar derretido que se enrollan alrededor de un palo o un cono. Tiene una textura suave y esponjosa, y se disuelve en la boca al contacto con la saliva. El algodón de azúcar suele tener un color rosa, pero también puede ser de otros colores, según el colorante que se le añada. Se elabora con una máquina especial que calienta el azúcar y lo hace girar a gran velocidad, creando los finos hilos que se recogen con un palo</string>
-    <string name="Descrip_beQue">El beicon es un producto cárnico que se obtiene de la panceta del cerdo, que es la parte ventral del animal. El beicon se somete a un proceso de salazón y ahumado, que le da un sabor intenso y un aroma característico. El beicon se puede consumir de diferentes formas, como frito, asado, horneado o crudo. Es un ingrediente muy utilizado en la cocina anglosajona, especialmente en el desayuno, donde se acompaña con huevos, pan y mermelada</string>
-    <string name="Descrip_buñuelos">El beicon es un producto cárnico que se obtiene de la panceta del cerdo, que es la parte ventral del animal. El beicon se somete a un proceso de salazón y ahumado, que le da un sabor intenso y un aroma característico. El beicon se puede consumir de diferentes formas, como frito, asado, horneado o crudo. Es un ingrediente muy utilizado en la cocina anglosajona, especialmente en el desayuno, donde se acompaña con huevos, pan y mermelada</string>
-    <string name="Descrip_polPoHec">El pollo al horno es una receta que consiste en cocinar un pollo entero o en trozos en el horno, con aceite, sal, pimienta y otras especias o hierbas aromáticas. El pollo al horno se suele acompañar de una guarnición de patatas, cebollas, zanahorias u otras verduras, que se asan junto al pollo y se impregnan de su jugo. El pollo al horno es un plato fácil de preparar, económico y nutritivo, que se puede adaptar al gusto de cada uno.</string>
-    <string name="Descrip_polFri">El pollo frito es una forma de cocinar el pollo que consiste en sumergirlo en aceite caliente después de haberlo rebozado con harina, pan rallado y especias. El pollo frito tiene una capa exterior crujiente y un interior tierno y jugoso. Es un plato muy popular en la gastronomía de muchos países, especialmente en Estados Unidos, donde se suele servir con salsa de barbacoa, puré de patatas o ensalada de col.</string>
+    <string name="fecha_favorita">Seleccione tu fecha favorita</string>
+    <string name="es_mayor_18">¿Es mayor de 18 años?</string>
+    <string name="buscador">Buscador:</string>
     <string-array name="valores_comida">
         <item> Scones </item>
         <item> Super scones </item>
         <item> Carne cruda </item>
+        <item> Bistek </item>
+        <item> Coca cola </item>
         <item> Super desayuno </item>
         <item> Desayuno completo </item>
         <item> Ojo de dios </item>
-        <item> Bolas de carne sazonadao </item>
+        <item> Bolas de carne sazonada </item>
         <item> Algodón de azucar </item>
         <item> Beicon quemado </item>
         <item> Buñuelos </item>
-        <item> España </item>
-        <item> Angola </item>
-        <item> España </item>
+        <item> Pollo poco hecho </item>
+        <item> Pollo frito </item>
+        <item> Tarta de queso </item>
+        <item> Helado triple </item>
+        <item> Helado tres bolones </item>
+        <item> Helado cuatro bolones </item>
     </string-array>
 </resources>
