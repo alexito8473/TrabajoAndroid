@@ -1,15 +1,15 @@
 package com.example.trabajoandroid.Model
 
 class Usuario {
-    private var nombre: String
+    private var contraseña: String
     private var gmail: String
-    constructor(gmail: String,nombre: String){
+    constructor(gmail: String,contraseña: String){
         this.gmail=gmail
-        this.nombre=nombre
+        this.contraseña=contraseña
     }
 
-    fun getNombre(): String {
-        return nombre;
+    fun getContraseña(): String {
+        return contraseña;
     }
 
     fun getGmail(): String {

@@ -74,6 +74,6 @@
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextFuncionLista6Buscador"
-        app:srcCompat="@drawable/car_ui_icon_settings" />
+        app:srcCompat="@drawable/car_ui_icon_search" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

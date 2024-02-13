@@ -4,7 +4,7 @@ import android.content.Context
 import com.example.trabajoandroid.Model.Usuario
 
 class ListaUsuarios {
-    val listaTotalUsuarios: MutableList<Usuario> = mutableListOf()
+    private val listaTotalUsuarios: MutableList<Usuario> = mutableListOf()
     public fun crearListaUsuarios(context: Context): MutableList<Usuario> {
         listaTotalUsuarios.add(Usuario("admin@gmail.com", "admin"))
         listaTotalUsuarios.add(Usuario("alejandro@gmail.com", "123"))
@@ -15,4 +15,5 @@ class ListaUsuarios {
         listaTotalUsuarios.add(Usuario("pepe@gmail.com", "pepe"))
         return listaTotalUsuarios
     }
+
 }

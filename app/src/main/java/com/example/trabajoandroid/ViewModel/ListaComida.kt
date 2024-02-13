@@ -197,7 +197,7 @@ class ListaComida {
                 false,
                 R.drawable.tartadequeso,
                 12.6,
-                "tarta de queso",
+                context.getString(string.Descrip_tarQue),
                 false,
                 true,
                 "https://media.istockphoto.com/id/1359746755/es/v%C3%ADdeo/una-rebanada-de-tarta-de-queso-de-san-sebasti%C3%A1n-servida-con-un-tenedor.mp4?s=mp4-640x640-is&k=20&c=nymWqPAGydr2HRRiUwnITqfHx0AtoE1JazCsCItWkek="
@@ -210,7 +210,7 @@ class ListaComida {
                 false,
                 R.drawable.helado,
                 9.34,
-                "helado",
+                context.getString(string.Descrip_helado),
                 false,
                 true,
                 "https://media.istockphoto.com/id/1350768668/es/v%C3%ADdeo/vista-de-una-persona-caminando-con-helado-toscana-italia.mp4?s=mp4-640x640-is&k=20&c=1KrzRhSFOGDYmEJAP1eGeZFS4h_4Etnic6qkM4PIdg4="
@@ -223,7 +223,7 @@ class ListaComida {
                 false,
                 R.drawable.heladotri,
                 11.2,
-                "helado con 3 bolas",
+                context.getString(string.Descrip_helado3),
                 false,
                 true,
                 "https://media.istockphoto.com/id/507565322/es/v%C3%ADdeo/colocar-con-cuchara-de-helado-cornet.mp4?s=mp4-640x640-is&k=20&c=_DKZLz61q_ti1PuDTMpfyPkc8dTQcVChwMcMm8UrmTg="
@@ -236,7 +236,7 @@ class ListaComida {
                 false,
                 R.drawable.heladocu,
                 15.99,
-                "helado con 4 bolas",
+                context.getString(string.Descrip_helado4),
                 false,
                 true,
                 "https://media.istockphoto.com/id/485471169/es/v%C3%ADdeo/conos-de-helado.mp4?s=mp4-640x640-is&k=20&c=9vXLnUnTl1MX3kTKcChW-PCs6p4y-oeq_UEh0Vxvexk="

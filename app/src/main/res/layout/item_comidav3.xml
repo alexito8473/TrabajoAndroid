@@ -40,6 +40,8 @@
         android:layout_height="wrap_content"
         android:isIndicator="true"
         android:numStars="5"
+        android:stepSize="0.5"
+        android:progressBackgroundTint="@color/estrella"
         android:progressTint="@color/naranjaAmarillo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

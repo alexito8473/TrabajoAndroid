@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -26,8 +25,8 @@ class InicioSesionActivity : AppCompatActivity() {
     private lateinit var editPassword: EditText
     private lateinit var listaUsuarios: MutableList<Usuario>
     private lateinit var botonInicio: Button
-    private  var ubicacionSesion:String=""
-    private  var controlarSesion:String=""
+    private var ubicacionSesion: String = ""
+    private var controlarSesion: String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_inicio_sesion)
@@ -45,14 +44,16 @@ class InicioSesionActivity : AppCompatActivity() {
 
     private fun estableverVariablesID() {
         botonGoRegistro = findViewById(R.id.textInicioRegistrarse)
-        botonInicio= findViewById(R.id.butInicioIniciarSesion)
-        editEmail=findViewById(R.id.editTextInicioSesionemail)
-        editPassword= findViewById(R.id.editTextInicioSesionContraseña)
+        botonInicio = findViewById(R.id.butInicioIniciarSesion)
+        editEmail = findViewById(R.id.editTextInicioSesionemail)
+        editPassword = findViewById(R.id.editTextInicioSesionContraseña)
     }
+
     private fun estableverVariables() {
-        listaUsuarios=ListaUsuarios().listaTotalUsuarios
-        ubicacionSesion=getString(R.string.sesion)
+        listaUsuarios = ListaUsuarios().crearListaUsuarios(this)
+        ubicacionSesion = getString(R.string.sesion)
     }
+
     private fun leerFichero() {
         val filePath = File(filesDir, ubicacionSesion)
         try {
@@ -78,16 +79,21 @@ class InicioSesionActivity : AppCompatActivity() {
         } catch (e: Exception) {
         }
     }
+
     private fun estableverEscucha() {
         botonGoRegistro.setOnClickListener {
             startActivity(Intent(this, RegistrarseActivity::class.java))
         }
-        botonInicio.setOnClickListener{
-            var error=false
-            var cadena=""
-            if(editEmail.text.isBlank()&&editPassword.text.isBlank()){
-                ObjectAnimator.ofInt(botonInicio,"textColor", ContextCompat.getColor(this,R.color.pulsado)).apply {
-                    duration=300
+        botonInicio.setOnClickListener {
+            var error = false
+            var cadena = ""
+            if (editEmail.text.isBlank() && editPassword.text.isBlank()) {
+                ObjectAnimator.ofInt(
+                    botonInicio,
+                    "textColor",
+                    ContextCompat.getColor(this, R.color.pulsado)
+                ).apply {
+                    duration = 300
                     start()
                 }
                 if (editEmail.text.toString().isBlank()) {
@@ -98,12 +104,16 @@ class InicioSesionActivity : AppCompatActivity() {
                     error = true
                     cadena += " Email invalido"
                 }
-                if(error){
-                    Toast.makeText(this, cadena, Toast.LENGTH_SHORT).show()
+                if (error) {
+                    Toast.makeText(this, cadena, Toast.LENGTH_LONG).show()
                 }
-            }else{
-                escribirFichero()
-                startActivity(Intent(this, InicioActivity::class.java))
+            } else {
+                if(listaUsuarios.any { t -> t.getContraseña() == editPassword.text.toString() && t.getGmail() == editEmail.text.toString() }){
+                    escribirFichero()
+                    startActivity(Intent(this, InicioActivity::class.java))
+                }else{
+                    Toast.makeText(this, "Gmail y/o contraseña incorrectos", Toast.LENGTH_SHORT).show()
+                }
             }
         }
     }

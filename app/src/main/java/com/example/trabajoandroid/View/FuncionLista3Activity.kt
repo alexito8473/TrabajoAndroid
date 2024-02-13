@@ -72,7 +72,7 @@ class FuncionLista3Activity : AppCompatActivity() {
         }
         if (!(view as ToggleButton).isChecked) {
             ObjectAnimator.ofInt(textoTipo,"textColor", ContextCompat.getColor(this,R.color.carne)).apply {
-                duration=300
+                duration=500
                 start()
             }
             listaMostrar.clear()
@@ -80,7 +80,7 @@ class FuncionLista3Activity : AppCompatActivity() {
             textoTipo.text = getString(R.string.TogleOn);
         } else {
             ObjectAnimator.ofInt(textoTipo,"textColor", ContextCompat.getColor(this,R.color.verdura)).apply {
-                duration=300
+                duration=500
                 start()
             }
             listaMostrar.clear()
