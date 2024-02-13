@@ -1,5 +1,6 @@
 package com.example.trabajoandroid.View
 
+import android.animation.ObjectAnimator
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -7,9 +8,11 @@ import android.widget.ListView
 import android.widget.ProgressBar
 import android.widget.SeekBar
 import android.widget.SeekBar.OnSeekBarChangeListener
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.SearchView
+import androidx.core.content.ContextCompat
 import com.example.trabajoandroid.Model.Comida
 import com.example.trabajoandroid.R
 import com.example.trabajoandroid.ViewModel.ComidaAdapterV3
@@ -24,6 +27,11 @@ class FuncionLista4Activity : AppCompatActivity() {
     private lateinit var seekControl: SeekBar
     private lateinit var searchControl: SearchView
     private lateinit var progescontrolador: ProgressBar
+    private lateinit var textTodo: TextView
+    private lateinit var textCarne: TextView
+    private lateinit var textVerdura: TextView
+    private lateinit var textPostre: TextView
+
     private var filtradoText: String = ""
     private var seekControlPosicion: Int = 0
     private var listaTotalComida: MutableList<Comida> = mutableListOf()
@@ -43,6 +51,11 @@ class FuncionLista4Activity : AppCompatActivity() {
         seekControl = findViewById(R.id.seekBarFuncionLista4Control)
         searchControl = findViewById(R.id.searchFuncionLista4Controlar)
         progescontrolador = findViewById(R.id.proBarFuncionLista4)
+        textTodo = findViewById(R.id.textFuncionLista4Todo)
+        textCarne = findViewById(R.id.textFuncionLista4Carne)
+        textVerdura = findViewById(R.id.textFuncionLista4Verdura)
+        textPostre = findViewById(R.id.textFuncionLista4Postre)
+
         GlobalScope.launch {
             Thread.sleep(850)
             progescontrolador.visibility = View.INVISIBLE;
@@ -93,8 +106,19 @@ class FuncionLista4Activity : AppCompatActivity() {
     private fun controlarSeek(posicion: Int) {
         listaMostrar.clear()
         listaReserva.clear()
+        val duracion = 250L
+        val propiedad = "textColor"
         when (posicion) {
             0 -> {
+                resetTodosColoresTexto()
+                ObjectAnimator.ofInt(
+                    textTodo,
+                    propiedad,
+                    ContextCompat.getColor(this, R.color.fondo_oscuro)
+                ).apply {
+                    duration = duracion
+                    start()
+                }
                 listaReserva.addAll(listaTotalComida)
                 listaMostrar.addAll(listaReserva.filter { t ->
                     t.getNombre().lowercase().contains(filtradoText.lowercase())
@@ -102,6 +126,15 @@ class FuncionLista4Activity : AppCompatActivity() {
             }
 
             1 -> {
+                resetTodosColoresTexto()
+                ObjectAnimator.ofInt(
+                    textCarne,
+                    propiedad,
+                    ContextCompat.getColor(this, R.color.fondo_oscuro)
+                ).apply {
+                    duration = duracion
+                    start()
+                }
                 listaReserva.addAll(listaTotalComida.filter { t -> t.tieneCarne() })
                 listaMostrar.addAll(listaReserva.filter { t ->
                     t.getNombre().lowercase().contains(filtradoText.lowercase())
@@ -109,6 +142,15 @@ class FuncionLista4Activity : AppCompatActivity() {
             }
 
             2 -> {
+                resetTodosColoresTexto()
+                ObjectAnimator.ofInt(
+                    textVerdura,
+                    propiedad,
+                    ContextCompat.getColor(this, R.color.fondo_oscuro)
+                ).apply {
+                    duration = duracion
+                    start()
+                }
                 listaReserva.addAll(listaTotalComida.filter { t -> !t.tieneCarne() && !t.isPostre() && !t.isBebida() })
                 listaMostrar.addAll(listaReserva.filter { t ->
                     t.getNombre().lowercase().contains(filtradoText.lowercase())
@@ -116,6 +158,15 @@ class FuncionLista4Activity : AppCompatActivity() {
             }
 
             3 -> {
+                resetTodosColoresTexto()
+                ObjectAnimator.ofInt(
+                    textPostre,
+                    propiedad,
+                    ContextCompat.getColor(this, R.color.fondo_oscuro)
+                ).apply {
+                    duration = duracion
+                    start()
+                }
                 listaReserva.addAll(listaTotalComida.filter { t -> t.isPostre() })
                 listaMostrar.addAll(listaReserva.filter { t ->
                     t.getNombre().lowercase().contains(filtradoText.lowercase())
@@ -124,5 +175,12 @@ class FuncionLista4Activity : AppCompatActivity() {
         }
         seekControlPosicion = posicion
         adapter.notifyDataSetChanged()
+    }
+
+    private fun resetTodosColoresTexto() {
+        textTodo.setTextColor(ContextCompat.getColor(this, R.color.black))
+        textVerdura.setTextColor(ContextCompat.getColor(this, R.color.black))
+        textCarne.setTextColor(ContextCompat.getColor(this, R.color.black))
+        textPostre.setTextColor(ContextCompat.getColor(this, R.color.black))
     }
 }

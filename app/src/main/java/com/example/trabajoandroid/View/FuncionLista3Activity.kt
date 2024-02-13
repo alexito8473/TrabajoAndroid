@@ -1,5 +1,6 @@
 package com.example.trabajoandroid.View
 
+import android.animation.ObjectAnimator
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -9,6 +10,7 @@ import android.widget.TextView
 import android.widget.ToggleButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
+import androidx.core.content.ContextCompat
 import com.example.trabajoandroid.Model.Comida
 import com.example.trabajoandroid.R
 import com.example.trabajoandroid.ViewModel.ComidaAdapterV2
@@ -69,10 +71,18 @@ class FuncionLista3Activity : AppCompatActivity() {
             proguess(proContinuacion)
         }
         if (!(view as ToggleButton).isChecked) {
+            ObjectAnimator.ofInt(textoTipo,"textColor", ContextCompat.getColor(this,R.color.carne)).apply {
+                duration=300
+                start()
+            }
             listaMostrar.clear()
             listaMostrar.addAll(listaTotalComida.filter { t -> t.tieneCarne() })
             textoTipo.text = getString(R.string.TogleOn);
         } else {
+            ObjectAnimator.ofInt(textoTipo,"textColor", ContextCompat.getColor(this,R.color.verdura)).apply {
+                duration=300
+                start()
+            }
             listaMostrar.clear()
             listaMostrar.addAll(listaTotalComida.filter { t -> !t.tieneCarne() && !t.isPostre() && !t.isBebida() })
             textoTipo.text = getString(R.string.TogleOf);

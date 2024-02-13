@@ -29,8 +29,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/editTextFuncionLista6Buscador"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:focusedSearchResultHighlightColor="@color/black"
+        android:hint="@string/buscador"
+        android:outlineAmbientShadowColor="@color/black"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butFuncionLista6Volver" />
+
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardFuncionLista4Controlador"
+        android:id="@+id/cardFuncionLista6Controlador"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="320dp"
@@ -42,9 +58,22 @@
         app:layout_constraintTop_toTopOf="@+id/textFuncionLista6Titulo">
 
         <ListView
-            android:id="@+id/listFuncionLista4Mostrar"
+            android:id="@+id/listFuncionLista6Mostrar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"></ListView>
     </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floButFuncionLista6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/fondo_complementaro"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/cardFuncionLista6Controlador"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFuncionLista6Buscador"
+        app:srcCompat="@drawable/car_ui_icon_settings" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

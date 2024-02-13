@@ -87,18 +87,18 @@ class FuncionLista2Activity : AppCompatActivity() {
         chipCarne.setOnClickListener {
             if (chipCarne.isChecked) {
                 listaMostrar.addAll(listaTotalComida.filter { t -> t.tieneCarne() })
-                listaReserva.addAll(listaTotalComida.filter { t -> t.tieneCarne() })
+                listaReserva.addAll(listaMostrar)
             } else {
-                listaMostrar.removeAll { t -> t.tieneCarne() }
                 listaReserva.removeAll { t -> t.tieneCarne() }
+                listaMostrar.removeAll { t -> t.tieneCarne() }
             }
             onPrecio(radioDesconocido)
             adapter.notifyDataSetChanged()
         }
         chipVerdura.setOnClickListener {
             if (chipVerdura.isChecked) {
-                listaMostrar.addAll(listaTotalComida.filter { t -> !t.tieneCarne() && !t.isPostre() && !t.isBebida() })
                 listaReserva.addAll(listaTotalComida.filter { t -> !t.tieneCarne() && !t.isPostre() && !t.isBebida() })
+                listaMostrar.addAll(listaReserva)
             } else {
                 listaMostrar.removeAll { t -> !t.tieneCarne() && !t.isPostre() && !t.isBebida() }
                 listaReserva.removeAll { t -> !t.tieneCarne() && !t.isPostre() && !t.isBebida() }
@@ -108,8 +108,8 @@ class FuncionLista2Activity : AppCompatActivity() {
         }
         chipPostre.setOnClickListener {
             if (chipPostre.isChecked) {
-                listaMostrar.addAll(listaTotalComida.filter { t -> t.isPostre() })
                 listaReserva.addAll(listaTotalComida.filter { t -> t.isPostre() })
+                listaMostrar.addAll(listaReserva)
             } else {
                 listaMostrar.removeAll { t -> t.isPostre() }
                 listaReserva.removeAll { t -> t.isPostre() }
@@ -119,8 +119,8 @@ class FuncionLista2Activity : AppCompatActivity() {
         }
         chipBebida.setOnClickListener {
             if (chipBebida.isChecked) {
-                listaMostrar.addAll(listaTotalComida.filter { t -> t.isBebida() })
                 listaReserva.addAll(listaTotalComida.filter { t -> t.isBebida() })
+                listaMostrar.addAll(listaReserva)
             } else {
                 listaMostrar.removeAll { t -> t.isBebida() }
                 listaReserva.removeAll { t -> t.isBebida() }

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.CartaActivity">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nombre_restaurant"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMenuGoMenu"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        app:cardBackgroundColor="@color/fondo_complementaro"
+        app:cardCornerRadius="45dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardMenuFuncionLista"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/menu"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMenuFuncionLista"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        app:cardBackgroundColor="@color/fondo_complementaro"
+        app:cardCornerRadius="45dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardMenuFuncionLista2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardMenuGoMenu">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/FuncionLista1"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMenuFuncionLista2"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        app:cardBackgroundColor="@color/fondo_complementaro"
+        app:cardCornerRadius="45dp"
+        app:layout_constraintBottom_toTopOf="@id/cardMenuFuncionLista3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardMenuFuncionLista">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/FuncionLista2"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMenuFuncionLista3"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        app:cardBackgroundColor="@color/fondo_complementaro"
+        app:cardCornerRadius="45dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardMenuFuncionLista4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardMenuFuncionLista2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/FuncionLista3"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMenuFuncionLista4"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        app:cardBackgroundColor="@color/fondo_complementaro"
+        app:cardCornerRadius="45dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardMenuFuncionLista5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardMenuFuncionLista3">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/FuncionLista4"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMenuFuncionLista5"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        app:cardBackgroundColor="@color/fondo_complementaro"
+        app:cardCornerRadius="45dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardMenuFuncionLista6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardMenuFuncionLista4">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/FuncionLista5"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMenuFuncionLista6"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        app:cardBackgroundColor="@color/fondo_complementaro"
+        app:cardCornerRadius="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardMenuFuncionLista5">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/FuncionLista6"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

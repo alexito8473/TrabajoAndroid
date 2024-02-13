@@ -1,5 +1,6 @@
 package com.example.trabajoandroid.View
 
+import android.animation.ObjectAnimator
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -9,6 +10,7 @@ import android.widget.ListView
 import android.widget.Switch
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
+import androidx.core.content.ContextCompat
 import com.example.trabajoandroid.Model.Comida
 import com.example.trabajoandroid.R
 import com.example.trabajoandroid.ViewModel.ComidaAdapter
@@ -59,6 +61,7 @@ class MainActivity : AppCompatActivity() {
             botonBuscador()
         }
         switchCarne.setOnClickListener {
+
             switchCarne()
         }
         botonDesplazamiento.setOnClickListener {
@@ -99,11 +102,19 @@ class MainActivity : AppCompatActivity() {
 
     private fun switchCarne() {
         if (switchCarne.isChecked) {
+            ObjectAnimator.ofInt(switchCarne,"textColor",ContextCompat.getColor(this,R.color.carne)).apply {
+                duration=1000
+                start()
+            }
             listaReserva.clear()
             listaReserva.addAll(listaMostrar)
             listaMostrar.clear()
             listaMostrar.addAll(listaReserva.filter { t -> t.tieneCarne() }.toList())
         } else {
+            ObjectAnimator.ofInt(switchCarne,"textColor",ContextCompat.getColor(this,R.color.black)).apply {
+                duration=1000
+                start()
+            }
             if (autoCompleteBuscador.text.toString().isBlank()) {
                 listaMostrar.clear()
                 listaMostrar.addAll(listaTotalComida)

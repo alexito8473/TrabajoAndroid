@@ -5,13 +5,14 @@
     <string name="accederMenu">Acceder al menu</string>
     <string name="Precio">Precio:</string>
     <string name="Iniciar_Sesion">Iniciar sesión</string>
-    <string name="FuncionLista1">Función lista 1</string>
-    <string name="FuncionLista2">Función lista 2</string>
-    <string name="FuncionLista3">Función lista 3</string>
-    <string name="FuncionLista4">Función lista 4</string>
-    <string name="FuncionLista5">Función lista 5</string>
-    <string name="FuncionWeb">Función web</string>
-
+    <string name="FuncionLista1">Carta version 1</string>
+    <string name="FuncionLista2">Carta version 2</string>
+    <string name="FuncionLista3">Carta version 3</string>
+    <string name="FuncionLista4">Carta version 4</string>
+    <string name="FuncionLista5">Carta version 5</string>
+    <string name="FuncionLista6">Carta version 6</string>
+    <string name="FuncionWeb">Google</string>
+    <string name="FuncionCarta">Carta</string>
     <string name="Descrip_scones">Los scones son unos panecillos típicos de la cocina inglesa, que se suelen servir con té, crema batida y mermelada. Tienen una textura suave y esponjosa, y se pueden preparar con diferentes ingredientes, como arándanos, queso, pasas o frutos secos.</string>
     <string name="Descrip_superScones"> Los scones son unos bocadillos dulces o salados que se originaron en Escocia y que se popularizaron en el Reino Unido y otros países. Se elaboran con una masa de harina, mantequilla, azúcar y leche, a la que se le puede añadir frutas, queso o especias.</string>
     <string name="Descrip_carneCruda">La carne cruda es la carne que no ha sido cocinada ni sometida a ningún proceso de conservación. Se puede consumir de diferentes formas, como el tartar, el carpaccio, el ceviche o el sushi. Sin embargo, comer carne cruda puede tener riesgos para la salud, ya que puede contener bacterias, parásitos, virus o toxinas que pueden provocar enfermedades como la salmonelosis, la triquinosis, la toxoplasmosis o la listeriosis</string>
@@ -60,24 +61,37 @@
     <string name="fecha_favorita">Seleccione tu fecha favorita</string>
     <string name="es_mayor_18">¿Es mayor de 18 años?</string>
     <string name="buscador">Buscador...</string>
+    <string name="solo_carne">Solo carne</string>
+    <string name="button">Button</string>
+    <string name="todo">Todo</string>
+    <string name="carne">Carne</string>
+    <string name="postre">Postre</string>
+    <string name="verdura">Verdura</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="nombre">Nombre</string>
+    <string name="porque_nos_escogerias">¿Porque nos escogerias?</string>
+    <string name="nuestra_app_de_comida_se_destaca_por_una_experiencia_nica_y_conveniente_que_no_encontrar_s_en_otras_plataformas_con_una_interfaz_intuitiva_y_una_amplia_selecci_n_de_restaurantes_locales_de_alta_calidad_ofrecemos_la_combinaci_n_perfecta_entre_variedad_y_facilidad_adem_s_nuestro_sistema_de_entrega_r_pida_y_eficiente_garantiza_que_tu_comida_llegue_caliente_y_fresca_a_tu_puerta_en_tiempo_r_cord_descarga_nuestra_app_hoy_mismo_y_descubre_por_qu_somos_la_mejor_opci_n_para_satisfacer_tus_antojos_gastron_micos">Nuestra app de comida se destaca por una experiencia única y conveniente que no encontrarás en otras plataformas. Con una interfaz intuitiva y una amplia selección de restaurantes locales de alta calidad, ofrecemos la combinación perfecta entre variedad y facilidad. Además, nuestro sistema de entrega rápida y eficiente garantiza que tu comida llegue caliente y fresca a tu puerta en tiempo récord. ¡Descarga nuestra app hoy mismo y descubre por qué somos la mejor opción para satisfacer tus antojos gastronómicos!</string>
+    <string name="que_productos_tenemos">¿Que productos tenemos?</string>
     <string-array name="valores_comida">
-        <item> Scones </item>
-        <item> Super scones </item>
-        <item> Carne cruda </item>
-        <item> Bistek </item>
-        <item> Coca cola </item>
-        <item> Super desayuno </item>
-        <item> Desayuno completo </item>
-        <item> Ojo de dios </item>
-        <item> Bolas de carne sazonada </item>
-        <item> Algodón de azucar </item>
-        <item> Beicon quemado </item>
-        <item> Buñuelos </item>
-        <item> Pollo poco hecho </item>
-        <item> Pollo frito </item>
-        <item> Tarta de queso </item>
-        <item> Helado triple </item>
-        <item> Helado tres bolones </item>
-        <item> Helado cuatro bolones </item>
+        <item>Scones </item>
+        <item>Super scones</item>
+        <item>Carne cruda</item>
+        <item>Bistek</item>
+        <item>Coca cola </item>
+        <item>Super desayuno</item>
+        <item>Desayuno completo</item>
+        <item>Ojo de dios</item>
+        <item>Bolas de carne sazonada</item>
+        <item>Algodón de azucar</item>
+        <item>Beicon quemad </item>
+        <item>Buñuelos</item>
+        <item>Pollo poco hecho</item>
+        <item>Pollo frito</item>
+        <item>Tarta de queso</item>
+        <item>Helado triple</item>
+        <item>Helado tres bolones</item>
+        <item>Helado cuatro bolones</item>
     </string-array>
 </resources>
