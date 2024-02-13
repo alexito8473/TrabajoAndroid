@@ -13,6 +13,7 @@ class CartaActivity : AppCompatActivity() {
     private lateinit var botonFuncionLista4: CardView
     private lateinit var botonFuncionLista5: CardView
     private lateinit var botonFuncionLista6: CardView
+    private lateinit var botonFuncionVolverMenu: CardView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_carta)
@@ -26,6 +27,7 @@ class CartaActivity : AppCompatActivity() {
         botonFuncionLista4 = findViewById(R.id.cardMenuFuncionLista4)
         botonFuncionLista5 = findViewById(R.id.cardMenuFuncionLista5)
         botonFuncionLista6 = findViewById(R.id.cardMenuFuncionLista6)
+        botonFuncionVolverMenu= findViewById(R.id.cardMenuGoMenu)
     }
     private fun establecerEscucha() {
         botonFuncionLista1.setOnClickListener {
@@ -45,6 +47,9 @@ class CartaActivity : AppCompatActivity() {
         }
         botonFuncionLista6.setOnClickListener {
             startActivity(Intent(this, FuncionLista6Activity::class.java))
+        }
+        botonFuncionVolverMenu.setOnClickListener {
+            startActivity(Intent(this, MenuActivity::class.java))
         }
     }
 }

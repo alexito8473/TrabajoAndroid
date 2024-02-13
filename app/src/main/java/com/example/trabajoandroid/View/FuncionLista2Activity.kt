@@ -129,7 +129,7 @@ class FuncionLista2Activity : AppCompatActivity() {
             adapter.notifyDataSetChanged()
         }
         butMenu.setOnClickListener {
-            startActivity(Intent(this, MenuActivity::class.java))
+            startActivity(Intent(this, CartaActivity::class.java))
         }
     }
 

@@ -5,15 +5,21 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.example.trabajoandroid.R
+import java.io.File
+import java.io.FileOutputStream
+import java.io.OutputStreamWriter
 
 class MenuActivity : AppCompatActivity() {
     private lateinit var botonInicioSesion: CardView
     private lateinit var botonFuncionCarta: CardView
     private lateinit var botonFuncionWeb: CardView
+    private lateinit var botonFuncionInicio: CardView
+    private  var ubicacionSesion: String=""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
         establecerVariablesID()
+        establecerVariables()
         establecerEscucha()
     }
 
@@ -21,10 +27,26 @@ class MenuActivity : AppCompatActivity() {
         botonInicioSesion = findViewById(R.id.cardMenuInicioSesion)
         botonFuncionWeb = findViewById(R.id.cardMenuWeb)
         botonFuncionCarta = findViewById(R.id.cardMenuCarta)
+        botonFuncionInicio= findViewById(R.id.cardMenuInicio)
     }
 
+    private fun establecerVariables() {
+        ubicacionSesion=getString(R.string.sesion)
+    }
+    private fun escribirFichero() {
+        try {
+            val filePath = File(filesDir, ubicacionSesion);
+            val fileOutputStream = FileOutputStream(filePath)
+            val outputStreamWriter = OutputStreamWriter(fileOutputStream)
+            outputStreamWriter.write("False")
+            outputStreamWriter.close()
+            fileOutputStream.close()
+        } catch (e: Exception) {
+        }
+    }
     private fun establecerEscucha() {
         botonInicioSesion.setOnClickListener {
+            escribirFichero()
             startActivity(Intent(this, InicioSesionActivity::class.java))
         }
         botonFuncionWeb.setOnClickListener {
@@ -32,6 +54,9 @@ class MenuActivity : AppCompatActivity() {
         }
         botonFuncionCarta.setOnClickListener {
             startActivity(Intent(this, CartaActivity::class.java))
+        }
+        botonFuncionInicio.setOnClickListener {
+            startActivity(Intent(this, InicioActivity::class.java))
         }
     }
 

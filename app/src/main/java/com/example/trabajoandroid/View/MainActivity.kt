@@ -23,8 +23,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var listView: ListView
     private lateinit var adapter: ComidaAdapter
     private lateinit var botonDesplazamiento: AppCompatButton
-    private lateinit var comidas_array:Array<String>
-    private lateinit var adpatorComidasSee:ArrayAdapter<String>
+    private lateinit var comidas_array: Array<String>
+    private lateinit var adpatorComidasSee: ArrayAdapter<String>
     private var listaTotalComida: MutableList<Comida> = mutableListOf()
     private var listaMostrar: MutableList<Comida> = mutableListOf()
     private var listaReserva: MutableList<Comida> = mutableListOf()
@@ -51,8 +51,9 @@ class MainActivity : AppCompatActivity() {
         listaReserva.addAll(listaTotalComida)
         adapter = ComidaAdapter(this, listaMostrar)
         listView.adapter = adapter
-        comidas_array=resources.getStringArray(R.array.valores_comida)
-        adpatorComidasSee= ArrayAdapter<String>(this,android.R.layout.simple_dropdown_item_1line,comidas_array)
+        comidas_array = resources.getStringArray(R.array.valores_comida)
+        adpatorComidasSee =
+            ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, comidas_array)
         autoCompleteBuscador.setAdapter(adpatorComidasSee)
     }
 
@@ -61,11 +62,10 @@ class MainActivity : AppCompatActivity() {
             botonBuscador()
         }
         switchCarne.setOnClickListener {
-
             switchCarne()
         }
         botonDesplazamiento.setOnClickListener {
-            startActivity(Intent(this, MenuActivity::class.java))
+            startActivity(Intent(this, CartaActivity::class.java))
         }
         listView.setOnItemClickListener { parent, view, position, id ->
             val intent = Intent(this, DatoComidaActivity::class.java)
@@ -102,8 +102,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun switchCarne() {
         if (switchCarne.isChecked) {
-            ObjectAnimator.ofInt(switchCarne,"textColor",ContextCompat.getColor(this,R.color.carne)).apply {
-                duration=1000
+            ObjectAnimator.ofInt(
+                switchCarne,
+                "textColor",
+                ContextCompat.getColor(this, R.color.carne)
+            ).apply {
+                duration = 1000
                 start()
             }
             listaReserva.clear()
@@ -111,8 +115,12 @@ class MainActivity : AppCompatActivity() {
             listaMostrar.clear()
             listaMostrar.addAll(listaReserva.filter { t -> t.tieneCarne() }.toList())
         } else {
-            ObjectAnimator.ofInt(switchCarne,"textColor",ContextCompat.getColor(this,R.color.black)).apply {
-                duration=1000
+            ObjectAnimator.ofInt(
+                switchCarne,
+                "textColor",
+                ContextCompat.getColor(this, R.color.black)
+            ).apply {
+                duration = 1000
                 start()
             }
             if (autoCompleteBuscador.text.toString().isBlank()) {

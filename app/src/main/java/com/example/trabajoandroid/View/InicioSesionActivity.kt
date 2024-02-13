@@ -13,6 +13,12 @@ import androidx.core.content.ContextCompat
 import com.example.trabajoandroid.Model.Usuario
 import com.example.trabajoandroid.R
 import com.example.trabajoandroid.ViewModel.ListaUsuarios
+import java.io.BufferedReader
+import java.io.File
+import java.io.FileInputStream
+import java.io.FileOutputStream
+import java.io.InputStreamReader
+import java.io.OutputStreamWriter
 
 class InicioSesionActivity : AppCompatActivity() {
     private lateinit var botonGoRegistro: TextView
@@ -20,12 +26,21 @@ class InicioSesionActivity : AppCompatActivity() {
     private lateinit var editPassword: EditText
     private lateinit var listaUsuarios: MutableList<Usuario>
     private lateinit var botonInicio: Button
+    private  var ubicacionSesion:String=""
+    private  var controlarSesion:String=""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_inicio_sesion)
         estableverVariablesID()
         estableverVariables()
         estableverEscucha()
+        leerFichero()
+        try {
+            if (controlarSesion.toBoolean()) {
+                startActivity(Intent(this, InicioActivity::class.java))
+            }
+        } catch (e: Exception) {
+        }
     }
 
     private fun estableverVariablesID() {
@@ -36,8 +51,33 @@ class InicioSesionActivity : AppCompatActivity() {
     }
     private fun estableverVariables() {
         listaUsuarios=ListaUsuarios().listaTotalUsuarios
+        ubicacionSesion=getString(R.string.sesion)
+    }
+    private fun leerFichero() {
+        val filePath = File(filesDir, ubicacionSesion)
+        try {
+            val fileInputStream = FileInputStream(filePath)
+            val inputStreamReader = InputStreamReader(fileInputStream)
+            val bufferedReader = BufferedReader(inputStreamReader)
+            controlarSesion = bufferedReader.readLine()
+            bufferedReader.close()
+            inputStreamReader.close()
+            fileInputStream.close()
+        } catch (e: Exception) {
+        }
     }
 
+    private fun escribirFichero() {
+        try {
+            val filePath = File(filesDir, ubicacionSesion);
+            val fileOutputStream = FileOutputStream(filePath)
+            val outputStreamWriter = OutputStreamWriter(fileOutputStream)
+            outputStreamWriter.write("True")
+            outputStreamWriter.close()
+            fileOutputStream.close()
+        } catch (e: Exception) {
+        }
+    }
     private fun estableverEscucha() {
         botonGoRegistro.setOnClickListener {
             startActivity(Intent(this, RegistrarseActivity::class.java))
@@ -62,6 +102,7 @@ class InicioSesionActivity : AppCompatActivity() {
                     Toast.makeText(this, cadena, Toast.LENGTH_SHORT).show()
                 }
             }else{
+                escribirFichero()
                 startActivity(Intent(this, InicioActivity::class.java))
             }
         }

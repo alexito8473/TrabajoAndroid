@@ -63,7 +63,7 @@ class FuncionLista6Activity : AppCompatActivity() {
 
     private fun estableverEscucha() {
         butMenu.setOnClickListener {
-            startActivity(Intent(this, MenuActivity::class.java))
+            startActivity(Intent(this, CartaActivity::class.java))
         }
         pulsadorFloat.setOnClickListener{
             if(buscadorAuto.text.isNotEmpty()){

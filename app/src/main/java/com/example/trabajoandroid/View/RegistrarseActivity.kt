@@ -11,6 +11,9 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.trabajoandroid.R
+import java.io.File
+import java.io.FileOutputStream
+import java.io.OutputStreamWriter
 
 class RegistrarseActivity : AppCompatActivity() {
     private lateinit var calendar: CalendarView
@@ -23,6 +26,7 @@ class RegistrarseActivity : AppCompatActivity() {
     private lateinit var calendarFecha: CalendarView
     private lateinit var isMayor: CheckBox
     private lateinit var butRegistrarse: Button
+    private var ubicacionSesion: String=""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registrarse)
@@ -45,8 +49,20 @@ class RegistrarseActivity : AppCompatActivity() {
 
     private fun iniciarVariables() {
         fechaUsuario=""
+        ubicacionSesion=getString(R.string.sesion)
     }
 
+    private fun escribirFichero() {
+        try {
+            val filePath = File(filesDir, ubicacionSesion);
+            val fileOutputStream = FileOutputStream(filePath)
+            val outputStreamWriter = OutputStreamWriter(fileOutputStream)
+            outputStreamWriter.write("True")
+            outputStreamWriter.close()
+            fileOutputStream.close()
+        } catch (e: Exception) {
+        }
+    }
     private fun establecerEscucha() {
         calendar.setOnDateChangeListener { cv, year, month, day ->
             txFecha.text = " Fecha seleccionada : $day/$month/$year "
@@ -81,6 +97,7 @@ class RegistrarseActivity : AppCompatActivity() {
             if (error) {
                 Toast.makeText(this, cadena, Toast.LENGTH_SHORT).show()
             } else {
+                escribirFichero()
                 startActivity(Intent(this, InicioActivity::class.java))
             }
         }

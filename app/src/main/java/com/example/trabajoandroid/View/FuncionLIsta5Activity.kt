@@ -55,7 +55,7 @@ class FuncionLIsta5Activity : AppCompatActivity() {
             }
             adapter.notifyDataSetChanged()
         }
-        butMenu.setOnClickListener {  startActivity(Intent(this, MenuActivity::class.java)) }
+        butMenu.setOnClickListener {  startActivity(Intent(this, CartaActivity::class.java)) }
 
     }
     private fun establecerAdapter(){

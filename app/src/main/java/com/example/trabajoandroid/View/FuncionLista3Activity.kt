@@ -56,7 +56,7 @@ class FuncionLista3Activity : AppCompatActivity() {
 
     private fun estableverEscucha() {
         butMenu.setOnClickListener {
-            startActivity(Intent(this, MenuActivity::class.java))
+            startActivity(Intent(this, CartaActivity::class.java))
         }
         listView.setOnItemClickListener { parent, view, position, id ->
             val intent = Intent(this, DatoComidaV2Activity::class.java)

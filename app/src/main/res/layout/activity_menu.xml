@@ -4,38 +4,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fondo_claro"
+    android:background="@color/fondo_oscuro"
     tools:context=".View.MenuActivity">
 
+
+    <TextView
+        android:id="@+id/textMenu"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/complementario"
+        android:gravity="center"
+        android:text="@string/menu"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="45sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardMenuInicioSesion"
+        android:id="@+id/cardMenuInicio"
         android:layout_width="250dp"
         android:layout_height="60dp"
-        app:cardBackgroundColor="@color/fondo_complementaro"
+        app:cardBackgroundColor="@color/fondo_claro"
         app:cardCornerRadius="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardMenuWeb"
+        app:layout_constraintBottom_toTopOf="@+id/cardMenuCarta"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/textMenu"
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="@string/Iniciar_Sesion"
+            android:text="@string/informaci_n"
             android:textColor="@color/black"
             android:textSize="30sp" />
     </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMenuInicioSesion"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        app:cardBackgroundColor="@color/fondo_claro"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardMenuWeb"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/Cerrar_sesion"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+    </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardMenuCarta"
         android:layout_width="250dp"
         android:layout_height="60dp"
-        app:cardBackgroundColor="@color/fondo_complementaro"
+        app:cardBackgroundColor="@color/fondo_claro"
         app:cardCornerRadius="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/cardMenuInicio"
         app:layout_constraintBottom_toTopOf="@+id/cardMenuWeb"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardMenuInicioSesion">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:layout_width="match_parent"
@@ -45,16 +82,17 @@
             android:textColor="@color/black"
             android:textSize="30sp" />
     </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardMenuWeb"
         android:layout_width="250dp"
         android:layout_height="60dp"
-        app:cardBackgroundColor="@color/fondo_complementaro"
+        app:cardBackgroundColor="@color/fondo_claro"
         app:cardCornerRadius="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardMenuCarta"
+        app:layout_constraintBottom_toTopOf="@+id/cardMenuInicioSesion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardMenuInicioSesion">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:layout_width="match_parent"
@@ -64,4 +102,5 @@
             android:textColor="@color/black"
             android:textSize="30sp" />
     </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

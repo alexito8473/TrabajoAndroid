@@ -72,7 +72,7 @@ class FuncionLista4Activity : AppCompatActivity() {
 
     private fun estableverEscucha() {
         butMenu.setOnClickListener {
-            startActivity(Intent(this, MenuActivity::class.java))
+            startActivity(Intent(this, CartaActivity::class.java))
         }
         seekControl.setOnSeekBarChangeListener(object : OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
