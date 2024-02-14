@@ -7,18 +7,23 @@
     android:background="@color/fondo_claro"
     android:orientation="vertical"
     tools:context=".View.FuncionLista2Activity">
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/butFuncionLista2Volver"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardTitulo"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:background="@color/fondo_oscuro"
-        android:text="@string/accederMenu"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        app:cardCornerRadius="29dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/butFuncionLista2Volver"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/accederMenu"
+            style="@style/stCardView3"/>
+    </androidx.cardview.widget.CardView>
+
 
     <TextView
         android:id="@+id/textView"
@@ -42,7 +47,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/butFuncionLista2Volver"
+        app:layout_constraintTop_toBottomOf="@+id/cardTitulo"
         app:layout_constraintVertical_bias="0.011">
 
         <com.google.android.material.chip.Chip

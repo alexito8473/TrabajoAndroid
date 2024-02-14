@@ -7,18 +7,23 @@
     android:background="@color/fondo_claro"
     tools:context=".View.FuncionLista3Activity">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/butFuncionLista3Volver"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardTitulo"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:background="@color/fondo_oscuro"
-        android:fontFamily="@font/gordita"
-        android:text="@string/accederMenu"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        app:cardCornerRadius="29dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/butFuncionLista3Volver"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/accederMenu"
+            style="@style/stCardView3"/>
+    </androidx.cardview.widget.CardView>
+
 
     <TextView
         android:id="@+id/textView"
@@ -44,7 +49,7 @@
         app:layout_constraintBottom_toTopOf="@+id/cardFuncionLista3Controlador"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/butFuncionLista3Volver" />
+        app:layout_constraintTop_toBottomOf="@+id/cardTitulo" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardFuncionLista3Controlador"
@@ -73,7 +78,7 @@
         app:layout_constraintBottom_toTopOf="@+id/toggleButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/butFuncionLista3Volver" />
+        app:layout_constraintTop_toBottomOf="@+id/cardTitulo" />
 
     <ProgressBar
         android:id="@+id/proFuncionLista3Barra"

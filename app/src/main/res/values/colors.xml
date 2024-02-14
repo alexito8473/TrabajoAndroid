@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="fondo_claro">#ffefdd</color>
     <color name="fondo_claro_claro">#FBEFE1</color>
+    <color name="fondo_claro_claro_tra">#97FBEFE1</color>
     <color name="fondo_oscuro">#396933</color>
     <color name="fondo_complementaro">#ddedff</color>
     <color name="fondo_oscuro_menosVisibilidad">#56396933</color>

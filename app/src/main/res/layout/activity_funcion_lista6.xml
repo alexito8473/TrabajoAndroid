@@ -5,18 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".View.FuncionLista6Activity">
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/butFuncionLista6Volver"
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardTitulo"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:background="@color/fondo_oscuro"
-        android:fontFamily="@font/gordita"
-        android:text="@string/accederMenu"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        app:cardCornerRadius="29dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textFuncionLista6Titulo" />
+        app:layout_constraintTop_toBottomOf="@+id/textFuncionLista6Titulo">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/butFuncionLista6Volver"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            style="@style/stCardView3"
+            android:text="@string/accederMenu" />
+    </androidx.cardview.widget.CardView>
+
 
     <TextView
         android:id="@+id/textFuncionLista6Titulo"
@@ -43,7 +49,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/butFuncionLista6Volver" />
+        app:layout_constraintTop_toBottomOf="@+id/cardTitulo" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardFuncionLista6Controlador"

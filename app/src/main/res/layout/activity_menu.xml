@@ -7,14 +7,36 @@
     android:background="@color/fondo_oscuro"
     tools:context=".View.MenuActivity">
 
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleX="1.5"
+        android:scaleY="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textMenu"
+        app:srcCompat="@drawable/fondoc" />
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="90dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardMenuInicio"
+        app:layout_constraintEnd_toEndOf="@+id/textMenu"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/top_background"
+        app:tint="@color/fondo_claro_claro" />
 
     <TextView
         android:id="@+id/textMenu"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/complementario"
         android:gravity="center"
         android:text="@string/menu"
+
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="45sp"
@@ -29,6 +51,7 @@
         android:layout_height="60dp"
         app:cardBackgroundColor="@color/fondo_claro"
         app:cardCornerRadius="15dp"
+        app:cardElevation="8dp"
         app:layout_constraintBottom_toTopOf="@+id/cardMenuCarta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textMenu"
@@ -102,5 +125,8 @@
             android:textColor="@color/black"
             android:textSize="30sp" />
     </androidx.cardview.widget.CardView>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
