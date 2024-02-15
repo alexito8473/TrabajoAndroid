@@ -1,15 +1,15 @@
 package com.example.trabajoandroid.View
 
+import android.animation.ObjectAnimator
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.cardview.widget.CardView
 import com.example.trabajoandroid.R
 
-/**
- * Esta clase representa la actividad de la carta
- * Permite al usuario poder manejarse entre distintas patallas, sirve como un menu
- */
 class CartaActivity : AppCompatActivity() {
     // Variables que nos índica los botones de la pantalla
     private lateinit var botonFuncionLista1: CardView
@@ -19,23 +19,16 @@ class CartaActivity : AppCompatActivity() {
     private lateinit var botonFuncionLista5: CardView
     private lateinit var botonFuncionLista6: CardView
     private lateinit var botonFuncionVolverMenu: CardView
-    /**
-     * Método que instancia la actividad
-     * Establece los escuchas y los métodos que se van a usar
-     */
+    private lateinit var imagenSuperior: ImageView
+    private lateinit var textTitulo: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_carta)
-        // Se establece los distintos id de la activity
         establecerVariablesID()
-        // Se establece las escuchas de la activity
         establecerEscucha()
+        establecerAnimaciones()
     }
 
-    /**
-     * Método que nos instancia las variables que necesidad recibir un id.
-     * Asigna a cada variable su id correspondiente.
-     */
     private fun establecerVariablesID() {
         botonFuncionLista1 = findViewById(R.id.cardMenuFuncionLista)
         botonFuncionLista2 = findViewById(R.id.cardMenuFuncionLista2)
@@ -44,11 +37,20 @@ class CartaActivity : AppCompatActivity() {
         botonFuncionLista5 = findViewById(R.id.cardMenuFuncionLista5)
         botonFuncionLista6 = findViewById(R.id.cardMenuFuncionLista6)
         botonFuncionVolverMenu= findViewById(R.id.cardMenuGoMenu)
+        imagenSuperior = findViewById(R.id.imageCarta)
+        textTitulo= findViewById(R.id.textCartaTitulo)
     }
-    /**
-     * Método que establece los escuchas de las actividades
-     * Cuando es pulsado el boton de la actividad tendra un comportamiento .
-     */
+    private fun establecerAnimaciones(){
+        animarView(botonFuncionLista1, "translationX")
+        animarView(botonFuncionLista2, "translationX")
+        animarView(botonFuncionLista3, "translationX")
+        animarView(botonFuncionLista4, "translationX")
+        animarView(botonFuncionLista5, "translationX")
+        animarView(botonFuncionLista6, "translationX")
+        animarView(botonFuncionVolverMenu, "translationX")
+        animarView(imagenSuperior, "translationY")
+        animarView(textTitulo, "translationY")
+    }
     private fun establecerEscucha() {
         botonFuncionLista1.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
@@ -70,6 +72,12 @@ class CartaActivity : AppCompatActivity() {
         }
         botonFuncionVolverMenu.setOnClickListener {
             startActivity(Intent(this, MenuActivity::class.java))
+        }
+    }
+    private fun animarView(view: View, tipoTranslacion: String) {
+        ObjectAnimator.ofFloat(view, tipoTranslacion, -1200f, view.getWidth().toFloat()).apply {
+            duration = 1000
+            start()
         }
     }
 }

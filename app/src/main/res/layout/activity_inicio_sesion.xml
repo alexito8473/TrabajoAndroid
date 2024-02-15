@@ -89,11 +89,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textInicioO" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardInicioSesion1"
         style="@style/stCardView"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         app:cardCornerRadius="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintBottom_toTopOf="@+id/cardInicioSesion2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textIniciomMostraInicio"
@@ -111,16 +112,16 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+        android:id="@+id/cardInicioSesion2"
         style="@style/stCardView"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="136dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textIniciomMostraInicio">
-
         <EditText
             android:id="@+id/editTextInicioSesionContraseña"
             style="@style/stText"
@@ -130,6 +131,7 @@
             android:ems="10"
             android:hint="Contraseña"
             android:inputType="textPassword" />
+
     </androidx.cardview.widget.CardView>
 
     <Button
@@ -141,7 +143,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardInicioSesion1"
         app:layout_constraintVertical_bias="0.401" />
 
     <ImageView
@@ -150,6 +152,7 @@
         android:layout_height="350dp"
         android:rotationX="180"
         android:scaleX="1.3"
+        android:scaleY="1.2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -20,6 +21,7 @@ class ComidaAdapterV5(private val context: Context, private val datos: MutableLi
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val dato = datos[position]
+        holder.itemView.startAnimation( AnimationUtils.loadAnimation(context, com.android.car.ui.R.anim.abc_slide_in_bottom))
         holder.bind(dato)
     }
 
@@ -28,8 +30,10 @@ class ComidaAdapterV5(private val context: Context, private val datos: MutableLi
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val textView: TextView = itemView.findViewById(R.id.textView6)
+
+        val textView: TextView = itemView.findViewById(R.id.textView6)
         val imageComida = itemView.findViewById<ImageView>(R.id.imageView)
+
         fun bind(dato: Comida) {
             textView.text = dato.getNombre()
             textView.textSize= 25F

@@ -1,13 +1,17 @@
 package com.example.trabajoandroid.View
 
+import android.animation.ArgbEvaluator
 import android.animation.ObjectAnimator
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import com.example.trabajoandroid.Model.Usuario
 import com.example.trabajoandroid.R
@@ -23,6 +27,8 @@ class InicioSesionActivity : AppCompatActivity() {
     private lateinit var botonGoRegistro: TextView
     private lateinit var editEmail: EditText
     private lateinit var editPassword: EditText
+    private lateinit var cardEmail: CardView
+    private lateinit var cardPasword: CardView
     private lateinit var listaUsuarios: MutableList<Usuario>
     private lateinit var botonInicio: Button
     private var ubicacionSesion: String = ""
@@ -46,6 +52,8 @@ class InicioSesionActivity : AppCompatActivity() {
         botonGoRegistro = findViewById(R.id.textInicioRegistrarse)
         botonInicio = findViewById(R.id.butInicioIniciarSesion)
         editEmail = findViewById(R.id.editTextInicioSesionemail)
+        cardEmail = findViewById(R.id.cardInicioSesion1)
+        cardPasword= findViewById(R.id.cardInicioSesion2)
         editPassword = findViewById(R.id.editTextInicioSesionContraseña)
     }
 
@@ -87,22 +95,16 @@ class InicioSesionActivity : AppCompatActivity() {
         botonInicio.setOnClickListener {
             var error = false
             var cadena = ""
-            if (editEmail.text.isBlank() && editPassword.text.isBlank()) {
-                ObjectAnimator.ofInt(
-                    botonInicio,
-                    "textColor",
-                    ContextCompat.getColor(this, R.color.pulsado)
-                ).apply {
-                    duration = 300
-                    start()
-                }
+            if (editEmail.text.isBlank() || editPassword.text.isBlank()) {
                 if (editEmail.text.toString().isBlank()) {
                     error = true
-                    cadena += " Nombre invalido"
+                    cadena += " Campo nombre vacio"
+                    animarBackground(cardEmail)
                 }
                 if (editPassword.text.toString().isBlank()) {
                     error = true
-                    cadena += " Email invalido"
+                    cadena += " Campo email vacio"
+                    animarBackground(cardPasword)
                 }
                 if (error) {
                     Toast.makeText(this, cadena, Toast.LENGTH_LONG).show()
@@ -115,6 +117,19 @@ class InicioSesionActivity : AppCompatActivity() {
                     Toast.makeText(this, "Gmail y/o contraseña incorrectos", Toast.LENGTH_SHORT).show()
                 }
             }
+        }
+    }
+    @SuppressLint("ObjectAnimatorBinding")
+    private fun animarBackground(view: View){
+        ObjectAnimator.ofObject(
+            view, "cardBackgroundColor",
+            ArgbEvaluator(), ContextCompat.getColor(this,R.color.white),
+            ContextCompat.getColor(this,R.color.pulsado_claro)
+        ).apply {
+            duration=3000
+            repeatCount=3
+            repeatMode=ObjectAnimator.REVERSE
+            start()
         }
     }
 

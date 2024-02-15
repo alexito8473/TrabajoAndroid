@@ -18,19 +18,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/fondoc" />
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/imageCarta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toTopOf="@+id/cardMenuGoMenu"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/textCartaTitulo"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/top_background"
         app:tint="@color/fondo_claro_claro" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textCartaTitulo"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:gravity="center"
@@ -52,7 +52,7 @@
         app:layout_constraintBottom_toTopOf="@+id/cardMenuFuncionLista"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/textCartaTitulo">
 
         <TextView
             android:layout_width="match_parent"

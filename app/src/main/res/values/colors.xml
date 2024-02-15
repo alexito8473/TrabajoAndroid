@@ -16,10 +16,10 @@
     <color name="fondo_oscuro_menosVisibilidad_menos">#31396933</color>
     <color name="transparente">#00FFFFFF</color>
     <color name="pulsado">#B90909</color>
+    <color name="pulsado_claro">#95F05A5A</color>
     <color name="carne">#9AB90909</color>
     <color name="verdura">#9A5FC543</color>
     <color name="naranjaAmarillo">#FFA200</color>
     <color name="complementario">#99DDEDFF</color>
     <color name="estrella">#d7caba</color>
-
 </resources>

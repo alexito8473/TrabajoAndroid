@@ -16,17 +16,11 @@ import com.example.trabajoandroid.R
 
 class ComidaAdapterV4(private val mContext: Context, private val listaComida: MutableList<Comida>) :
     BaseAdapter() {
-    override fun getCount(): Int {
-        return listaComida.size
-    }
+    override fun getCount(): Int { return listaComida.size }
 
-    override fun getItem(position: Int): Any {
-        return listaComida.get(position)
-    }
+    override fun getItem(position: Int): Any { return listaComida.get(position) }
 
-    override fun getItemId(position: Int): Long {
-      return position.toLong()
-    }
+    override fun getItemId(position: Int): Long { return position.toLong() }
 
     @SuppressLint("ViewHolder")
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
