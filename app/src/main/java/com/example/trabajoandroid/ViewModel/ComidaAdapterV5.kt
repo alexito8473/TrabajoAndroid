@@ -30,10 +30,8 @@ class ComidaAdapterV5(private val context: Context, private val datos: MutableLi
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
         val textView: TextView = itemView.findViewById(R.id.textView6)
         val imageComida = itemView.findViewById<ImageView>(R.id.imageView)
-
         fun bind(dato: Comida) {
             textView.text = dato.getNombre()
             textView.textSize= 25F

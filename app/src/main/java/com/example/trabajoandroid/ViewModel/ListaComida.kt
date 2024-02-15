@@ -7,7 +7,7 @@ import com.example.trabajoandroid.R
 import com.example.trabajoandroid.R.string
 
 class ListaComida {
-    public fun crearListaComida(context: Context): MutableList<Comida> {
+    fun crearListaComida(context: Context): MutableList<Comida> {
         val listaTotalComida: MutableList<Comida> = mutableListOf()
         listaTotalComida.add(
             Comida(
@@ -18,8 +18,8 @@ class ListaComida {
                 context.getString(string.Descrip_scones),
                 false,
                 false,
-                "https://media.istockphoto.com/id/1318392281/es/v%C3%ADdeo/scone-integral-en-la-bandeja-para-hornear-listo-para-hornear.mp4?s=mp4-640x640-is&k=20&c=GPTlBSEUgbgplNhoVvFnzGx8BY-G8Wtlxdqr03MufqQ="
-                ,3.1f
+                context.getString(string.video_Scones),
+                3.1f
             )
         )
         listaTotalComida.add(
@@ -31,8 +31,8 @@ class ListaComida {
                 context.getString(string.Descrip_superScones),
                 false,
                 false,
-                "https://media.istockphoto.com/id/976242398/es/v%C3%ADdeo/bollos-con-t%C3%A9-de-la-tarde.mp4?s=mp4-640x640-is&k=20&c=jDVJYfl6flpuNdka0D0VaJVa45T6YdIb8qf-52Ulyls="
-                ,5.0f
+                context.getString(string.video_SuperScones),
+                5.0f
             )
         )
         listaTotalComida.add(
@@ -44,8 +44,8 @@ class ListaComida {
                 context.getString(string.Descrip_carneCruda),
                 false,
                 false,
-                "https://media.istockphoto.com/id/1320134703/es/v%C3%ADdeo/sazonar-un-filete-de-costilla.mp4?s=mp4-640x640-is&k=20&c=-_0brO4Tiyi3hu0pbEr4V1ccaC0WXicgr41qAxWY3Wg="
-                ,2.9f
+                context.getString(string.video_carne),
+                2.9f
             )
         )
         listaTotalComida.add(
@@ -57,8 +57,8 @@ class ListaComida {
                 context.getString(string.Descrip_Bistek),
                 false,
                 false,
-                "https://media.istockphoto.com/id/1371167585/es/v%C3%ADdeo/sabrosos-cortes-de-carne.mp4?s=mp4-640x640-is&k=20&c=w1yAXqFGfhw6EBtn4Zv1r2WsD5rAomZ5h5pOejjv2eo="
-                ,4.3f
+                context.getString(string.video_bistek),
+                4.3f
             )
         )
         listaTotalComida.add(
@@ -70,8 +70,8 @@ class ListaComida {
                 context.getString(string.Descrip_coccaCola),
                 true,
                 false,
-                "https://media.istockphoto.com/id/1312124790/es/v%C3%ADdeo/ld-l%C3%ADquido-burbujeante-que-se-vierte-de-una-lata.mp4?s=mp4-640x640-is&k=20&c=LcslHwS7KFih9Og9eJb0yASGCYJg8q7vuwiajCJCaIU="
-                ,3.7f
+                context.getString(string.video_cocaCola),
+                3.7f
             )
         )
         listaTotalComida.add(
@@ -83,8 +83,8 @@ class ListaComida {
                 context.getString(string.Descrip_supDesay),
                 false,
                 false,
-                "https://media.istockphoto.com/id/1354614128/es/v%C3%ADdeo/desayuno-en-hotel-de-lujo-mesa-llena-de-comida-variada-del-buffet-en-el-complejo-moderno.mp4?s=mp4-640x640-is&k=20&c=geXWZOqJW11qIfIxJorKYbn-Kc6n8v6_x6Ib4W1P35o="
-                ,4.3f
+                context.getString(string.video_superdesa),
+                4.3f
             )
         )
         listaTotalComida.add(
@@ -96,8 +96,8 @@ class ListaComida {
                 context.getString(string.Descrip_desaCompl),
                 false,
                 false,
-                "https://media.istockphoto.com/id/929172776/es/v%C3%ADdeo/preparar-el-desayuno.mp4?s=mp4-640x640-is&k=20&c=wBz02J_CsZjojIgYsJJGE3LUuu4XDj_7MQTlNenxbfI="
-                ,2.7f
+                context.getString(string.video_desayuno),
+                2.7f
             )
         )
         listaTotalComida.add(
@@ -109,8 +109,8 @@ class ListaComida {
                 context.getString(string.Descrip_ojoDeDios),
                 false,
                 false,
-                "https://media.istockphoto.com/id/114488841/es/v%C3%ADdeo/alimentos-de-desayuno.mp4?s=mp4-640x640-is&k=20&c=4haBRjSaYoGxvr_TVH0lPYMszIgXa4IhvH8P1fudwkQ="
-                ,5.0f
+                context.getString(string.video_ojosdedios),
+                5.0f
             )
         )
         listaTotalComida.add(
@@ -122,8 +122,8 @@ class ListaComida {
                 context.getString(string.Descrip_boCar),
                 false,
                 false,
-                "https://media.istockphoto.com/id/482921500/es/v%C3%ADdeo/pan-de-grosor-de-san-luis-obispo-missouri-bistecs-de-carne-fritos-en-una-sart%C3%A9n.mp4?s=mp4-640x640-is&k=20&c=B97TiI-uIMPadYFDwTpqkEm0ZZuUZp5jQdH9TD13aJM="
-                ,2.2f
+                context.getString(string.video_bolasbuenas),
+                2.2f
             )
         )
         listaTotalComida.add(
@@ -135,8 +135,8 @@ class ListaComida {
                 context.getString(string.Descrip_algoAzu),
                 false,
                 true,
-                "https://media.istockphoto.com/id/902250750/es/v%C3%ADdeo/vuelta-de-algod%C3%B3n-de-az%C3%BAcar.mp4?s=mp4-640x640-is&k=20&c=2eUs-KQ0F-MvElY-evU2nmQulq1QzEzWuoEox-Xpd9U="
-                ,3.7f
+                context.getString(string.video_algoazu),
+                3.7f
             )
         )
         listaTotalComida.add(
@@ -148,8 +148,8 @@ class ListaComida {
                 context.getString(string.Descrip_beQue),
                 false,
                 false,
-                "https://media.istockphoto.com/id/1219089403/es/v%C3%ADdeo/la-c%C3%A1mara-sigue-a-cocinar-tocino-a-la-parrilla-mu%C3%B1eca-de-tocino-a-c%C3%A1mara-lenta.mp4?s=mp4-640x640-is&k=20&c=l4jvPj8k-tckVEgrJq-s0dwEDH-Tite7QBwLrBBvuDM="
-                ,4.5f
+                context.getString(string.video_beiconcrudo),
+                4.5f
             )
         )
         listaTotalComida.add(
@@ -161,8 +161,8 @@ class ListaComida {
                 context.getString(string.Descrip_buñuelos),
                 false,
                 false,
-                "https://media.istockphoto.com/id/1300007856/es/v%C3%ADdeo/castagnole-al-horno-con-az%C3%BAcar-en-polvo-comida-callejera-galletas-redondas-con-az%C3%BAcar-para-el.mp4?s=mp4-640x640-is&k=20&c=8GLXniTM1ICMPdTQTYEgb5uDNv2qVbZod6KTlYZ1vA8="
-                ,4.2f
+                context.getString(string.video_bunuelos),
+                4.2f
             )
         )
         listaTotalComida.add(
@@ -174,8 +174,8 @@ class ListaComida {
                 context.getString(string.Descrip_polPoHec),
                 false,
                 false,
-                "https://media.istockphoto.com/id/1309071675/es/v%C3%ADdeo/hornear-pollo-y-patatas-en-el-horno.mp4?s=mp4-640x640-is&k=20&c=WDmk4yBtbCfRAv4V0zYOLtcQ6geu2bvR5sQz3-8vKgo="
-                ,1.5f
+                context.getString(string.video_pollohecho),
+                1.5f
             )
         )
         listaTotalComida.add(
@@ -187,8 +187,8 @@ class ListaComida {
                 context.getString(string.Descrip_polFri),
                 false,
                 false,
-                "https://media.istockphoto.com/id/1130675449/es/v%C3%ADdeo/alitas-de-pollo-fritas-crujientes-muslos-y-piernas-cubiertas-de-salsa-pollo-frito-crujiente.mp4?s=mp4-640x640-is&k=20&c=wN0c3X6JF8yvMxnkQsdbzE-lQb-s-sX1ss_O3A5xJNM="
-                ,5.0f
+                context.getString(string.video_pollofrito),
+                5.0f
             )
         )
         listaTotalComida.add(
@@ -200,8 +200,8 @@ class ListaComida {
                 context.getString(string.Descrip_tarQue),
                 false,
                 true,
-                "https://media.istockphoto.com/id/1359746755/es/v%C3%ADdeo/una-rebanada-de-tarta-de-queso-de-san-sebasti%C3%A1n-servida-con-un-tenedor.mp4?s=mp4-640x640-is&k=20&c=nymWqPAGydr2HRRiUwnITqfHx0AtoE1JazCsCItWkek="
-                ,5.0f
+                context.getString(string.video_tartadequeso),
+                5.0f
             )
         )
         listaTotalComida.add(
@@ -213,8 +213,8 @@ class ListaComida {
                 context.getString(string.Descrip_helado),
                 false,
                 true,
-                "https://media.istockphoto.com/id/1350768668/es/v%C3%ADdeo/vista-de-una-persona-caminando-con-helado-toscana-italia.mp4?s=mp4-640x640-is&k=20&c=1KrzRhSFOGDYmEJAP1eGeZFS4h_4Etnic6qkM4PIdg4="
-                ,4.8f
+                context.getString(string.video_helado),
+                4.8f
             )
         )
         listaTotalComida.add(
@@ -226,8 +226,8 @@ class ListaComida {
                 context.getString(string.Descrip_helado3),
                 false,
                 true,
-                "https://media.istockphoto.com/id/507565322/es/v%C3%ADdeo/colocar-con-cuchara-de-helado-cornet.mp4?s=mp4-640x640-is&k=20&c=_DKZLz61q_ti1PuDTMpfyPkc8dTQcVChwMcMm8UrmTg="
-                ,3.6f
+                context.getString(string.video_heladotri),
+                3.6f
             )
         )
         listaTotalComida.add(
@@ -239,8 +239,8 @@ class ListaComida {
                 context.getString(string.Descrip_helado4),
                 false,
                 true,
-                "https://media.istockphoto.com/id/485471169/es/v%C3%ADdeo/conos-de-helado.mp4?s=mp4-640x640-is&k=20&c=9vXLnUnTl1MX3kTKcChW-PCs6p4y-oeq_UEh0Vxvexk="
-                ,2.2f
+                context.getString(string.video_heladocu),
+                2.2f
             )
         )
         return listaTotalComida
