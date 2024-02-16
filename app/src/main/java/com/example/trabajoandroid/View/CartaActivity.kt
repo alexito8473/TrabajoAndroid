@@ -11,7 +11,6 @@ import androidx.cardview.widget.CardView
 import com.example.trabajoandroid.R
 
 class CartaActivity : AppCompatActivity() {
-    // Variables que nos índica los botones de la pantalla
     private lateinit var botonFuncionLista1: CardView
     private lateinit var botonFuncionLista2: CardView
     private lateinit var botonFuncionLista3: CardView

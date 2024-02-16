@@ -31,7 +31,6 @@ class FuncionLista4Activity : AppCompatActivity() {
     private lateinit var textCarne: TextView
     private lateinit var textVerdura: TextView
     private lateinit var textPostre: TextView
-
     private var filtradoText: String = ""
     private var seekControlPosicion: Int = 0
     private var listaTotalComida: MutableList<Comida> = mutableListOf()
@@ -55,7 +54,6 @@ class FuncionLista4Activity : AppCompatActivity() {
         textCarne = findViewById(R.id.textFuncionLista4Carne)
         textVerdura = findViewById(R.id.textFuncionLista4Verdura)
         textPostre = findViewById(R.id.textFuncionLista4Postre)
-
         GlobalScope.launch {
             Thread.sleep(850)
             progescontrolador.visibility = View.INVISIBLE;
@@ -106,19 +104,10 @@ class FuncionLista4Activity : AppCompatActivity() {
     private fun controlarSeek(posicion: Int) {
         listaMostrar.clear()
         listaReserva.clear()
-        val duracion = 250L
-        val propiedad = "textColor"
         when (posicion) {
             0 -> {
                 resetTodosColoresTexto()
-                ObjectAnimator.ofInt(
-                    textTodo,
-                    propiedad,
-                    ContextCompat.getColor(this, R.color.fondo_oscuro)
-                ).apply {
-                    duration = duracion
-                    start()
-                }
+                animacionColorTexto(textTodo)
                 listaReserva.addAll(listaTotalComida)
                 listaMostrar.addAll(listaReserva.filter { t ->
                     t.getNombre().lowercase().contains(filtradoText.lowercase())
@@ -127,14 +116,7 @@ class FuncionLista4Activity : AppCompatActivity() {
 
             1 -> {
                 resetTodosColoresTexto()
-                ObjectAnimator.ofInt(
-                    textCarne,
-                    propiedad,
-                    ContextCompat.getColor(this, R.color.fondo_oscuro)
-                ).apply {
-                    duration = duracion
-                    start()
-                }
+                animacionColorTexto(textCarne)
                 listaReserva.addAll(listaTotalComida.filter { t -> t.tieneCarne() })
                 listaMostrar.addAll(listaReserva.filter { t ->
                     t.getNombre().lowercase().contains(filtradoText.lowercase())
@@ -143,14 +125,7 @@ class FuncionLista4Activity : AppCompatActivity() {
 
             2 -> {
                 resetTodosColoresTexto()
-                ObjectAnimator.ofInt(
-                    textVerdura,
-                    propiedad,
-                    ContextCompat.getColor(this, R.color.fondo_oscuro)
-                ).apply {
-                    duration = duracion
-                    start()
-                }
+                animacionColorTexto(textVerdura)
                 listaReserva.addAll(listaTotalComida.filter { t -> !t.tieneCarne() && !t.isPostre() && !t.isBebida() })
                 listaMostrar.addAll(listaReserva.filter { t ->
                     t.getNombre().lowercase().contains(filtradoText.lowercase())
@@ -159,14 +134,7 @@ class FuncionLista4Activity : AppCompatActivity() {
 
             3 -> {
                 resetTodosColoresTexto()
-                ObjectAnimator.ofInt(
-                    textPostre,
-                    propiedad,
-                    ContextCompat.getColor(this, R.color.fondo_oscuro)
-                ).apply {
-                    duration = duracion
-                    start()
-                }
+                animacionColorTexto(textPostre)
                 listaReserva.addAll(listaTotalComida.filter { t -> t.isPostre() })
                 listaMostrar.addAll(listaReserva.filter { t ->
                     t.getNombre().lowercase().contains(filtradoText.lowercase())
@@ -175,6 +143,17 @@ class FuncionLista4Activity : AppCompatActivity() {
         }
         seekControlPosicion = posicion
         adapter.notifyDataSetChanged()
+    }
+
+    private fun animacionColorTexto(view: TextView) {
+        ObjectAnimator.ofInt(
+            view,
+            "textColor",
+            ContextCompat.getColor(this, R.color.fondo_oscuro)
+        ).apply {
+            duration = 250
+            start()
+        }
     }
 
     private fun resetTodosColoresTexto() {

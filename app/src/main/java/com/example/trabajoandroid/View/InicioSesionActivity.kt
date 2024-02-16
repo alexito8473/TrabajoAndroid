@@ -119,8 +119,8 @@ class InicioSesionActivity : AppCompatActivity() {
             }
         }
     }
-    @SuppressLint("ObjectAnimatorBinding")
-    private fun animarBackground(view: View){
+
+    private fun animarBackground(view: CardView){
         ObjectAnimator.ofObject(
             view, "cardBackgroundColor",
             ArgbEvaluator(), ContextCompat.getColor(this,R.color.white),

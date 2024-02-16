@@ -77,6 +77,8 @@ class RegistrarseActivity : AppCompatActivity() {
             if (editNombre.text.toString().isBlank()) {
                 error = true
                 cadena += " Nombre invalido"
+                editNombre.error
+
             }
             if (editEmail.text.toString().isBlank()) {
                 error = true

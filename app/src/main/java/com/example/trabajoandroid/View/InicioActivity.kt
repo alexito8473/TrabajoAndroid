@@ -18,14 +18,13 @@ class InicioActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_inicio)
         establecerVariablesID()
-        establecerAdaptador()
+        establecerLista()
         establecerEscucha()
     }
 
     private fun establecerVariablesID() {
         recycler= findViewById(R.id.recyclerInicio)
         butMenu = findViewById(R.id.butFuncionInicioVolver)
-        recycler.setLayoutManager(LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false))
     }
 
     private fun establecerEscucha() {
@@ -34,7 +33,8 @@ class InicioActivity : AppCompatActivity() {
         }
     }
 
-    private fun establecerAdaptador() {
+    private fun establecerLista() {
+        recycler.setLayoutManager(LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false))
         recycler.adapter=ComidaAdapterV5(this,ListaComida().crearListaComida(this))
     }
 
